@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Rummy360/Rummy360.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
