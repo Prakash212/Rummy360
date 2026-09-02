@@ -3,12 +3,12 @@
     x:Class="Rummy360.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Rummy360"
-    Title="Rummy360">
+    xmlns:views="clr-namespace:Rummy360.Views"
+    FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Splash"
+        ContentTemplate="{DataTemplate views:SplashPage}"
+        Route="SplashPage" />
 
 </Shell>

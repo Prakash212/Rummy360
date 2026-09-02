@@ -1,10 +1,11 @@
-﻿namespace Rummy360
+﻿using Rummy360.Views;
+
+namespace Rummy360;
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        //Routing.RegisterRoute(nameof(SplashPage), typeof(SplashPage));
     }
 }

@@ -1,0 +1,136 @@
+<ContentPage
+    x:Class="Rummy360.Views.SplashPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#0F7A3D">
+
+    <Grid Padding="30">
+
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Spacing="20">
+
+            <!-- Logo Circle -->
+            <Border
+    WidthRequest="110"
+    HeightRequest="110"
+    HorizontalOptions="Center"
+    BackgroundColor="Transparent"
+    Stroke="#D4AF37"
+    StrokeThickness="3"
+    StrokeShape="RoundRectangle 55">
+
+                <Grid>
+
+                    <Label
+                        Text="🂡"
+                        FontSize="18"
+                        TextColor="#D4AF37"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10,6,0,0"/>
+
+                    <Label
+                        Text="R"
+                        FontSize="40"
+                        FontAttributes="Bold"
+                        TextColor="#D4AF37"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                    <Label
+                        Text="🂱"
+                        FontSize="18"
+                        TextColor="#D4AF37"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        Margin="0,6,10,0"/>
+
+                </Grid>
+
+            </Border>
+
+            <!-- App Name -->
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="0">
+
+                <Label
+                    Text="RUMMY"
+                    FontSize="34"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
+
+                <Label
+                    Text="360"
+                    FontSize="34"
+                    FontAttributes="Bold"
+                    TextColor="#D4AF37"/>
+
+            </HorizontalStackLayout>
+
+            <!-- Subtitle -->
+            <Label
+                Text="OFFLINE SCORE TRACKER"
+                FontSize="14"
+                FontAttributes="Bold"
+                CharacterSpacing="2"
+                TextColor="#F6E7A1"
+                HorizontalTextAlignment="Center"/>
+
+            <!-- Loading Text -->
+            <Label
+                Text="Loading game engine..."
+                FontSize="12"
+                TextColor="#CFE8DA"
+                HorizontalTextAlignment="Center"
+                Margin="0,25,0,0"/>
+
+            <!-- Progress Bar -->
+            <Border
+                BackgroundColor="#215C46"
+                StrokeThickness="0"
+                HeightRequest="8"
+                WidthRequest="280"
+                StrokeShape="RoundRectangle 4">
+
+                <Grid>
+
+                    <Border
+                        BackgroundColor="#D4AF37"
+                        HorizontalOptions="Start"
+                        WidthRequest="170"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 4"/>
+
+                </Grid>
+
+            </Border>
+
+        </VerticalStackLayout>
+
+        <!-- Footer -->
+        <VerticalStackLayout
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Spacing="2">
+
+            <Label
+                Text="Version 1.0 • Offline"
+                FontSize="11"
+                TextColor="#F6E7A1"
+                HorizontalTextAlignment="Center"/>
+
+            <Label
+                Text="Made with ❤️ in India"
+                FontSize="11"
+                TextColor="#E8E1B5"
+                HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentPage>
