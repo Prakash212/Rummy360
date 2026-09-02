@@ -13,6 +13,7 @@
                 Background="#0F7A3D"
                 StrokeThickness="0">
 
+
             <VerticalStackLayout Padding="24,45,24,20"
                                  Spacing="4">
 
@@ -84,30 +85,23 @@
               ColumnSpacing="16"
               RowSpacing="16">
 
-            <!-- PLAYERS -->
-            <Border Grid.Row="0"
-                    Grid.Column="0"
-                    Background="White"
-                    Stroke="#E5E7EB"
-                    StrokeShape="RoundRectangle 18">
+            <!-- PLAYERS CARD -->
+            <Border
+                Grid.Row="0"
+                Grid.Column="0"
+                Background="White"
+                Stroke="#E5E7EB"
+                StrokeShape="RoundRectangle 18">
 
-                <VerticalStackLayout Padding="18"
-                                     Spacing="8">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="PlayersCard_Tapped"/>
+                </Border.GestureRecognizers>
 
-                    <Label Text="👥"
-                           FontSize="26"/>
-
-                    <Label Text="Players"
-                           FontSize="15"
-                           FontAttributes="Bold"
-                           TextColor="#1F2937"/>
-
-                    <Label Text="Manage players"
-                           FontSize="11"
-                           TextColor="#6B7280"/>
-
+                <VerticalStackLayout Padding="18" Spacing="8">
+                    <Label Text="👥" FontSize="26"/>
+                    <Label Text="Players" FontSize="15" FontAttributes="Bold" TextColor="#1F2937"/>
+                    <Label Text="Manage players" FontSize="11" TextColor="#6B7280"/>
                 </VerticalStackLayout>
-
             </Border>
 
             <!-- HISTORY -->

@@ -12,4 +12,13 @@
         ContentTemplate="{DataTemplate views:SplashPage}"
         Route="SplashPage" />
 
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:HomePage}"
+        Route="HomePage" />
+
+    <ShellContent
+        Title="Players"
+        Route="PlayersPage"
+        ContentTemplate="{DataTemplate views:PlayersPage}" />
 </Shell>
