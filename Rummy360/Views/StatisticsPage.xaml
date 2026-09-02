@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="Rummy360.Views.StatisticsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="18">
+            <Border Background="#0F7A3D">
+                <VerticalStackLayout Padding="24,34,24,24">
+                    <Label Text="Statistics" FontSize="13" TextColor="#CFE8DA"/>
+                    <Label Text="Player Leaderboard" FontSize="26" FontAttributes="Bold" TextColor="White"/>
+                </VerticalStackLayout>
+            </Border>
+            <!-- Champion Card -->
+            <Border Margin="20,0" Background="#FFF7ED" Stroke="#FBBF24" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="6">
+                    <Label Text="CURRENT CHAMPION" FontSize="12" FontAttributes="Bold" TextColor="#B45309"/>
+                    <Label Text="🏆 Bhanu Prakash" FontSize="22" FontAttributes="Bold" TextColor="#B45309"/>
+                    <Label Text="Win Rate : 72%" FontSize="13" TextColor="#92400E"/>
+                </VerticalStackLayout>
+            </Border>
+            <Grid Margin="20,0" ColumnDefinitions="*,*" ColumnSpacing="16">
+                <!-- Games -->
+                <Border Grid.Column="0" Background="#ECFDF5" Stroke="#BBF7D0" StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Padding="16">
+                        <Label Text="TOTAL GAMES" FontSize="11" TextColor="#16A34A"/>
+                        <Label Text="28" FontSize="28" FontAttributes="Bold" TextColor="#16A34A"/>
+                    </VerticalStackLayout>
+                </Border>
+                <!-- Rounds -->
+                <Border Grid.Column="1" Background="#EFF6FF" Stroke="#BFDBFE" StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Padding="16">
+                        <Label
+                            Text="TOTAL ROUNDS"
+                            FontSize="11"
+                            TextColor="#2563EB"/>
+                        <Label
+                            Text="143"
+                            FontSize="28"
+                            FontAttributes="Bold"
+                            TextColor="#2563EB"/>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+            <Border Margin="20,0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="14">
+                    <Label Text="TOP PLAYERS" FontSize="12" FontAttributes="Bold" TextColor="#6B7280"/>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="🥇 Bhanu Prakash" TextColor="#D97706"/>
+                        <Label Grid.Column="1" Text="12 Wins" FontAttributes="Bold" TextColor="#D97706"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="🥈 Ramesh Kumar" TextColor="#2563EB"/>
+                        <Label Grid.Column="1" Text="8 Wins" FontAttributes="Bold" TextColor="#2563EB"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="🥉 Suresh Kumar" TextColor="#EA580C"/>
+                        <Label Grid.Column="1" Text="5 Wins" FontAttributes="Bold" TextColor="#EA580C"/>
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="4️⃣ Kiran Kumar" TextColor="#16A34A"/>
+                        <Label Grid.Column="1" Text="3 Wins" FontAttributes="Bold" TextColor="#16A34A"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Border Margin="20,0" Background="#ECFDF5" Stroke="#BBF7D0" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="10">
+                    <Label Text="PLAYER INSIGHTS" FontSize="12" FontAttributes="Bold" TextColor="#166534"/>
+                    <Label Text="🔥 Longest Winning Streak : 5 Games" TextColor="#166534"/>
+                    <Label Text="🎯 Lowest Average Score : 18.2" TextColor="#166534"/>
+                    <Label Text="👑 Most Dealer Turns : Ramesh Kumar" TextColor="#166534"/>
+                </VerticalStackLayout>
+            </Border>
+            <Border Margin="20,0,20,24" Background="#0F7A3D" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                <Grid HeightRequest="56">
+                    <Label Text="← BACK TO HOME" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

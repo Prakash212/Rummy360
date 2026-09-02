@@ -14,4 +14,8 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(NewGamePage));
     }
+    private async void Statistics_Tapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(StatisticsPage));
+    }
 }

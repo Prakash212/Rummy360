@@ -5,188 +5,71 @@
     Shell.NavBarIsVisible="False"
     BackgroundColor="#F5F7FA">
 
-    <Grid RowDefinitions="120,Auto,Auto,*"
-          Padding="0">
-
+    <Grid RowDefinitions="120,Auto,Auto,*" Padding="0">
         <!-- HEADER -->
-        <Border Grid.Row="0"
-                Background="#0F7A3D"
-                StrokeThickness="0">
-
-
-            <VerticalStackLayout Padding="24,45,24,20"
-                                 Spacing="4">
-
-                <Label Text="👋 Welcome"
-                       FontSize="13"
-                       TextColor="#C7E9D5"/>
-
-                <Label Text="Rummy360"
-                       FontSize="28"
-                       FontAttributes="Bold"
-                       TextColor="White"/>
-
+        <Border Grid.Row="0" Background="#0F7A3D" StrokeThickness="0">
+            <VerticalStackLayout Padding="24,45,24,20" Spacing="4">
+                <Label Text="👋 Welcome" FontSize="13" TextColor="#C7E9D5"/>
+                <Label Text="Rummy360" FontSize="28" FontAttributes="Bold" TextColor="White"/>
             </VerticalStackLayout>
-
         </Border>
-
         <!-- LAST GAME CARD -->
-        <Border Grid.Row="1"
-                Margin="20,-20,20,0"
-                Background="White"
-                Stroke="#E5E7EB"
-                StrokeShape="RoundRectangle 18">
-
-            <VerticalStackLayout Padding="18"
-                                 Spacing="6">
-
-                <Label Text="LAST GAME"
-                       FontSize="11"
-                       TextColor="#6B7280"/>
-
-                <Label Text="No Active Game"
-                       FontSize="18"
-                       FontAttributes="Bold"
-                       TextColor="#0F7A3D"/>
-
-                <Label Text="Start a new game to begin."
-                       FontSize="12"
-                       TextColor="#6B7280"/>
-
+        <Border Grid.Row="1" Margin="20,-20,20,0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+            <VerticalStackLayout Padding="18" Spacing="6">
+                <Label Text="LAST GAME" FontSize="11" TextColor="#6B7280"/>
+                <Label Text="No Active Game" FontSize="18" FontAttributes="Bold" TextColor="#0F7A3D"/>
+                <Label Text="Start a new game to begin." FontSize="12" TextColor="#6B7280"/>
             </VerticalStackLayout>
-
         </Border>
-
         <!-- NEW GAME BUTTON -->
-        <Border Grid.Row="2"
-                Margin="20,20,20,0"
-                Background="#0F7A3D"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 16">
-            
+        <Border Grid.Row="2" Margin="20,20,20,0" Background="#0F7A3D" StrokeThickness="0" StrokeShape="RoundRectangle 16">            
             <Border.GestureRecognizers>
                 <TapGestureRecognizer Tapped="NewGame_Tapped"/>
-            </Border.GestureRecognizers>
-            
+            </Border.GestureRecognizers>            
             <Grid HeightRequest="56">
-
-                <Label Text="+ NEW GAME"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       FontSize="18"
-                       FontAttributes="Bold"
-                       TextColor="White"/>
-
+                <Label Text="+ NEW GAME" HorizontalOptions="Center" VerticalOptions="Center" FontSize="18" FontAttributes="Bold" TextColor="White"/>
             </Grid>
         </Border>
-
         <!-- MENU GRID -->
-        <Grid Grid.Row="3"
-              Margin="20,20"
-              ColumnDefinitions="*,*"
-              RowDefinitions="Auto,Auto"
-              ColumnSpacing="16"
-              RowSpacing="16">
-
+        <Grid Grid.Row="3" Margin="20,20" ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="16" RowSpacing="16">
             <!-- PLAYERS CARD -->
-            <Border
-                Grid.Row="0"
-                Grid.Column="0"
-                Background="White"
-                Stroke="#E5E7EB"
-                StrokeShape="RoundRectangle 18">
-
+            <Border Grid.Row="0" Grid.Column="0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="PlayersCard_Tapped"/>
                 </Border.GestureRecognizers>
-
                 <VerticalStackLayout Padding="18" Spacing="8">
                     <Label Text="👥" FontSize="26"/>
                     <Label Text="Players" FontSize="15" FontAttributes="Bold" TextColor="#1F2937"/>
                     <Label Text="Manage players" FontSize="11" TextColor="#6B7280"/>
                 </VerticalStackLayout>
             </Border>
-
             <!-- HISTORY -->
-            <Border Grid.Row="0"
-                    Grid.Column="1"
-                    Background="White"
-                    Stroke="#E5E7EB"
-                    StrokeShape="RoundRectangle 18">
-
-                <VerticalStackLayout Padding="18"
-                                     Spacing="8">
-
-                    <Label Text="🕘"
-                           FontSize="26"/>
-
-                    <Label Text="History"
-                           FontSize="15"
-                           FontAttributes="Bold"
-                           TextColor="#1F2937"/>
-
-                    <Label Text="Past games"
-                           FontSize="11"
-                           TextColor="#6B7280"/>
-
+            <Border Grid.Row="0" Grid.Column="1" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="8">
+                    <Label Text="🕘" FontSize="26"/>
+                    <Label Text="History" FontSize="15" FontAttributes="Bold" TextColor="#1F2937"/>
+                    <Label Text="Past games" FontSize="11" TextColor="#6B7280"/>
                 </VerticalStackLayout>
-
             </Border>
-
             <!-- SETTINGS -->
-            <Border Grid.Row="1"
-                    Grid.Column="0"
-                    Background="White"
-                    Stroke="#E5E7EB"
-                    StrokeShape="RoundRectangle 18">
-
-                <VerticalStackLayout Padding="18"
-                                     Spacing="8">
-
-                    <Label Text="⚙️"
-                           FontSize="26"/>
-
-                    <Label Text="Settings"
-                           FontSize="15"
-                           FontAttributes="Bold"
-                           TextColor="#1F2937"/>
-
-                    <Label Text="Game preferences"
-                           FontSize="11"
-                           TextColor="#6B7280"/>
-
+            <Border Grid.Row="1" Grid.Column="0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="8">
+                    <Label Text="⚙️" FontSize="26"/>
+                    <Label Text="Settings" FontSize="15" FontAttributes="Bold" TextColor="#1F2937"/>
+                    <Label Text="Game preferences" FontSize="11" TextColor="#6B7280"/>
                 </VerticalStackLayout>
-
             </Border>
-
             <!-- STATISTICS -->
-            <Border Grid.Row="1"
-                    Grid.Column="1"
-                    Background="White"
-                    Stroke="#E5E7EB"
-                    StrokeShape="RoundRectangle 18">
-
-                <VerticalStackLayout Padding="18"
-                                     Spacing="8">
-
-                    <Label Text="🏆"
-                           FontSize="26"/>
-
-                    <Label Text="Statistics"
-                           FontSize="15"
-                           FontAttributes="Bold"
-                           TextColor="#1F2937"/>
-
-                    <Label Text="Wins and games"
-                           FontSize="11"
-                           TextColor="#6B7280"/>
-
+            <Border Grid.Row="1" Grid.Column="1" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Statistics_Tapped"/>
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Padding="18" Spacing="8">
+                    <Label Text="🏆" FontSize="26"/>
+                    <Label Text="Statistics" FontSize="15" FontAttributes="Bold" TextColor="#1F2937"/>
+                    <Label Text="Wins and games" FontSize="11" TextColor="#6B7280"/>
                 </VerticalStackLayout>
-
             </Border>
-
         </Grid>
-
     </Grid>
-
 </ContentPage>
