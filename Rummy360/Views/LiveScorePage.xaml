@@ -207,7 +207,7 @@
                     <Label Text="GAME PROGRESS"
                        FontSize="13"
                        FontAttributes="Bold"
-                       TextColor="#166534"/>    
+                       TextColor="#166534"/>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Target Score"/>
@@ -284,9 +284,86 @@
                 </VerticalStackLayout>
 
             </Border>
-            
+
+            <!-- ADD ROUND BUTTON -->
+            <Border Margin="20,0"
+                Background="#0F7A3D"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 18">
+
+                <Grid HeightRequest="58">
+
+                    <Label Text="➕ ADD ROUND SCORE"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                </Grid>
+
+            </Border>
+
+            <!-- ROUND HISTORY -->
+            <Border    Margin="20,0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="12">
+                    <Label Text="ROUND HISTORY" FontSize="13" FontAttributes="Bold" TextColor="#6B7280"/>
+                    <!-- Round 1 -->
+                    <Border Background="#F5F7FA" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                        <VerticalStackLayout Padding="14" Spacing="2">
+                            <Label Text="Round 1" FontAttributes="Bold" TextColor="#0F7A3D"/>
+                            <Label Text="BP 25 • RK 10 • SK 40 • KK 5" FontSize="12" TextColor="#6B7280"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    <!-- Round 2 -->
+                    <Border Background="#F5F7FA" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                        <VerticalStackLayout Padding="14" Spacing="2">
+                            <Label Text="Round 2" FontAttributes="Bold" TextColor="#2563EB"/>
+                            <Label Text="BP 5 • RK 15 • SK 0 • KK 10" FontSize="12" TextColor="#6B7280"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    <!-- Round 3 -->
+                    <Border Background="#F5F7FA" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                        <VerticalStackLayout Padding="14" Spacing="2">
+                            <Label Text="Round 3" FontAttributes="Bold" TextColor="#EA580C"/>
+                            <Label Text="BP 20 • RK 30 • SK 10 • KK 5" FontSize="12" TextColor="#6B7280"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- GAME STATUS -->
+            <Border Margin="20,0" Background="#ECFDF5" Stroke="#BBF7D0" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="10">
+                    <Label Text="GAME STATUS" FontSize="13" FontAttributes="Bold" TextColor="#166534"/>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Active Players"/>
+                        <Label Grid.Column="1" Text="4" FontAttributes="Bold" TextColor="#166534"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Dealer Next Round"/>
+                        <Label Grid.Column="1" Text="Ramesh Kumar" FontAttributes="Bold" TextColor="#166534"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Upcoming Round"/>
+                        <Label Grid.Column="1" Text="2" FontAttributes="Bold" TextColor="#166534"/>
+                    </Grid>
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- FINISH GAME -->
+            <Border    Margin="20,0"    Background="#F3F4F6"    Stroke="#E5E7EB"    StrokeShape="RoundRectangle 16">
+                <Grid HeightRequest="54">
+                    <Label Text="🏁 FINISH GAME" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="#4B5563"/>
+                </Grid>
+            </Border>
+
+            <!-- FOOTER -->
+            <Label Margin="0,8,0,24" Text="Version 1.0 • Offline" FontSize="11" HorizontalOptions="Center" TextColor="#9CA3AF"/>
+        
         </VerticalStackLayout>
-
     </ScrollView>
-
 </ContentPage>
