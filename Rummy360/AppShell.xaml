@@ -21,4 +21,15 @@
         Title="Players"
         Route="PlayersPage"
         ContentTemplate="{DataTemplate views:PlayersPage}" />
+    
+    <ShellContent
+        Title="Players"
+        Route="PlayersPage"
+        ContentTemplate="{DataTemplate views:PlayersPage}" />
+
+    <ShellContent
+        Title="New Game"
+        Route="NewGamePage"
+        ContentTemplate="{DataTemplate views:NewGamePage}" />
+
 </Shell>

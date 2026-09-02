@@ -63,7 +63,11 @@
                 Background="#0F7A3D"
                 StrokeThickness="0"
                 StrokeShape="RoundRectangle 16">
-
+            
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="NewGame_Tapped"/>
+            </Border.GestureRecognizers>
+            
             <Grid HeightRequest="56">
 
                 <Label Text="+ NEW GAME"
@@ -74,7 +78,6 @@
                        TextColor="White"/>
 
             </Grid>
-
         </Border>
 
         <!-- MENU GRID -->

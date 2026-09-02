@@ -10,4 +10,8 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(PlayersPage));
     }
+    private async void NewGame_Tapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(NewGamePage));
+    }
 }
