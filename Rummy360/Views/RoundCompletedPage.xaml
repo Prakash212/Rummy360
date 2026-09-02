@@ -62,6 +62,9 @@
             </Border>
             <!-- View History -->
             <Border Margin="20,0,20,24" Background="#F3F4F6" Stroke="#E5E7EB" StrokeShape="RoundRectangle 16">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="History_Tapped"/>
+                </Border.GestureRecognizers>
                 <Grid HeightRequest="48">
                     <Label HorizontalOptions="Center" Text="VIEW ROUND HISTORY" TextColor="#4B5563" VerticalOptions="Center" />
                 </Grid>

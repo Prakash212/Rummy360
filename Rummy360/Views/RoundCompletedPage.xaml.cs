@@ -6,4 +6,8 @@ public partial class RoundCompletedPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private async void History_Tapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(RoundHistoryPage));
+    }
 }
