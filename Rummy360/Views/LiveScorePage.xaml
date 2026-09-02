@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Rummy360.Views.LiveScorePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="18">
+
+            <!-- HEADER -->
+            <Border Background="#0F7A3D" StrokeThickness="0">
+
+                <VerticalStackLayout Padding="24,34,24,24">
+
+                    <Label Text="Live Game"
+                           FontSize="13"
+                           TextColor="#CFE8DA"/>
+
+                    <Label Text="Round 1 / Game 101"
+                           FontSize="26"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- GAME INFO CARD -->
+            <Border Margin="20,0"
+                    Background="#ECFDF5"
+                    Stroke="#BBF7D0"
+                    StrokeShape="RoundRectangle 18">
+
+                <VerticalStackLayout Padding="18" Spacing="8">
+
+                    <Label Text="👑 Dealer : Bhanu Prakash"
+                           FontAttributes="Bold"
+                           TextColor="#166534"/>
+
+                    <Label Text="Drop Amount : 40 Points"
+                           FontSize="13"
+                           TextColor="#166534"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- CURRENT ROUND SCORE CARD -->
+            <Border Margin="20,0"
+                    Background="White"
+                    Stroke="#E5E7EB"
+                    StrokeShape="RoundRectangle 18">
+
+                <VerticalStackLayout Padding="18" Spacing="14">
+
+                    <Label Text="CURRENT ROUND SCORES"
+                           FontSize="12"
+                           TextColor="#6B7280"/>
+
+                    <!-- Bhanu -->
+                    <Grid ColumnDefinitions="*,60">
+                        <Label Text="👑 Bhanu Prakash"
+                               FontAttributes="Bold"
+                               TextColor="#0F7A3D"/>
+
+                        <Border Grid.Column="1"
+                                Background="#F3F4F6"
+                                Stroke="#E5E7EB"
+                                StrokeShape="RoundRectangle 10"
+                                Padding="8,6">
+
+                            <Label Text="25"
+                                   HorizontalOptions="Center"
+                                   FontAttributes="Bold"/>
+
+                        </Border>
+                    </Grid>
+
+                    <!-- Ramesh -->
+                    <Grid ColumnDefinitions="*,60">
+                        <Label Text="Ramesh Kumar"
+                               TextColor="#2563EB"/>
+
+                        <Border Grid.Column="1"
+                                Background="#F3F4F6"
+                                Stroke="#E5E7EB"
+                                StrokeShape="RoundRectangle 10"
+                                Padding="8,6">
+
+                            <Label Text="10"
+                                   HorizontalOptions="Center"
+                                   FontAttributes="Bold"/>
+
+                        </Border>
+                    </Grid>
+
+                    <!-- Suresh -->
+                    <Grid ColumnDefinitions="*,60">
+                        <Label Text="Suresh Kumar"
+                               TextColor="#EA580C"/>
+
+                        <Border Grid.Column="1"
+                                Background="#F3F4F6"
+                                Stroke="#E5E7EB"
+                                StrokeShape="RoundRectangle 10"
+                                Padding="8,6">
+
+                            <Label Text="40"
+                                   HorizontalOptions="Center"
+                                   FontAttributes="Bold"/>
+
+                        </Border>
+                    </Grid>
+
+                    <!-- Kiran -->
+                    <Grid ColumnDefinitions="*,60">
+                        <Label Text="Kiran Kumar"
+                               TextColor="#16A34A"/>
+
+                        <Border Grid.Column="1"
+                                Background="#F3F4F6"
+                                Stroke="#E5E7EB"
+                                StrokeShape="RoundRectangle 10"
+                                Padding="8,6">
+
+                            <Label Text="5"
+                                   HorizontalOptions="Center"
+                                   FontAttributes="Bold"/>
+
+                        </Border>
+                    </Grid>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

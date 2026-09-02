@@ -6,4 +6,8 @@ public partial class SeatingOrderPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private async void StartRound_Tapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(LiveScorePage));
+    }
 }
