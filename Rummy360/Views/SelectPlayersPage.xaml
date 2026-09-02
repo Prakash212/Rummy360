@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Rummy360.Views.SelectPlayersPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#F5F7FA">
+
+    <Grid RowDefinitions="95,*">
+
+        <!-- HEADER -->
+        <Border
+            Grid.Row="0"
+            Background="#0F7A3D"
+            StrokeThickness="0">
+
+            <VerticalStackLayout Padding="24,34,24,18">
+
+                <Label
+                    Text="Create New Game"
+                    FontSize="13"
+                    TextColor="#CFE8DA"/>
+
+                <Label
+                    Text="Select Players"
+                    FontSize="26"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
+
+            </VerticalStackLayout>
+
+        </Border>
+
+        <!-- CONTENT -->
+        <ScrollView Grid.Row="1">
+
+            <VerticalStackLayout Padding="20,20,20,30"
+                                 Spacing="18">
+
+                <!-- INFO BOX -->
+                <Border
+                    Background="#ECFDF5"
+                    Stroke="#BBF7D0"
+                    StrokeShape="RoundRectangle 14">
+
+                    <HorizontalStackLayout Padding="14"
+                                           Spacing="10">
+
+                        <Label Text="✔"
+                               FontSize="18"
+                               TextColor="#16A34A"/>
+
+                        <Label
+                            Text="Select between 2 and 6 players."
+                            FontSize="13"
+                            TextColor="#166534"/>
+
+                    </HorizontalStackLayout>
+
+                </Border>
+
+                <!-- PLAYER 1 -->
+                <Border
+                    Background="White"
+                    Stroke="#16A34A"
+                    StrokeShape="RoundRectangle 18">
+
+                    <Grid Padding="16"
+                          ColumnDefinitions="40,*,Auto">
+
+                        <Border
+                            WidthRequest="28"
+                            HeightRequest="28"
+                            Background="#16A34A"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14">
+
+                            <Label
+                                Text="✓"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                FontAttributes="Bold"
+                                TextColor="White"/>
+
+                        </Border>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Margin="14,0"
+                                             Spacing="2">
+
+                            <Label
+                                Text="Bhanu Prakash"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                TextColor="#1F2937"/>
+
+                            <Label
+                                Text="12 Games Played"
+                                FontSize="12"
+                                TextColor="#6B7280"/>
+
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="BP"
+                            FontAttributes="Bold"
+                            TextColor="#D4AF37"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- PLAYER 2 -->
+                <Border
+                    Background="White"
+                    Stroke="#E5E7EB"
+                    StrokeShape="RoundRectangle 18">
+
+                    <Grid Padding="16"
+                          ColumnDefinitions="40,*,Auto">
+
+                        <Border
+                            WidthRequest="28"
+                            HeightRequest="28"
+                            Background="#E5E7EB"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"/>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Margin="14,0"
+                                             Spacing="2">
+
+                            <Label
+                                Text="Ramesh Kumar"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                TextColor="#1F2937"/>
+
+                            <Label
+                                Text="4 Games Played"
+                                FontSize="12"
+                                TextColor="#6B7280"/>
+
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="RK"
+                            FontAttributes="Bold"
+                            TextColor="#16A34A"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- PLAYER 3 -->
+                <Border
+                    Background="White"
+                    Stroke="#E5E7EB"
+                    StrokeShape="RoundRectangle 18">
+
+                    <Grid Padding="16"
+                          ColumnDefinitions="40,*,Auto">
+
+                        <Border
+                            WidthRequest="28"
+                            HeightRequest="28"
+                            Background="#E5E7EB"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"/>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Margin="14,0"
+                                             Spacing="2">
+
+                            <Label
+                                Text="Suresh Kumar"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                TextColor="#1F2937"/>
+
+                            <Label
+                                Text="0 Games Played"
+                                FontSize="12"
+                                TextColor="#6B7280"/>
+
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="SK"
+                            FontAttributes="Bold"
+                            TextColor="#2563EB"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- PLAYER 4 -->
+                <Border
+                    Background="White"
+                    Stroke="#E5E7EB"
+                    StrokeShape="RoundRectangle 18">
+
+                    <Grid Padding="16"
+                          ColumnDefinitions="40,*,Auto">
+
+                        <Border
+                            WidthRequest="28"
+                            HeightRequest="28"
+                            Background="#E5E7EB"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"/>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Margin="14,0"
+                                             Spacing="2">
+
+                            <Label
+                                Text="Kiran Kumar"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                TextColor="#1F2937"/>
+
+                            <Label
+                                Text="8 Games Played"
+                                FontSize="12"
+                                TextColor="#6B7280"/>
+
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="KK"
+                            FontAttributes="Bold"
+                            TextColor="#EA580C"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- PLAYER 5 -->
+                <Border
+                    Background="White"
+                    Stroke="#E5E7EB"
+                    StrokeShape="RoundRectangle 18">
+
+                    <Grid Padding="16"
+                          ColumnDefinitions="40,*,Auto">
+
+                        <Border
+                            WidthRequest="28"
+                            HeightRequest="28"
+                            Background="#E5E7EB"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"/>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Margin="14,0"
+                                             Spacing="2">
+
+                            <Label
+                                Text="Sai Krishna"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                TextColor="#1F2937"/>
+
+                            <Label
+                                Text="2 Games Played"
+                                FontSize="12"
+                                TextColor="#6B7280"/>
+
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="SK"
+                            FontAttributes="Bold"
+                            TextColor="#7C3AED"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- PLAYER 6 -->
+                <Border
+                    Background="White"
+                    Stroke="#E5E7EB"
+                    StrokeShape="RoundRectangle 18">
+
+                    <Grid Padding="16"
+                          ColumnDefinitions="40,*,Auto">
+
+                        <Border
+                            WidthRequest="28"
+                            HeightRequest="28"
+                            Background="#E5E7EB"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 14"/>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Margin="14,0"
+                                             Spacing="2">
+
+                            <Label
+                                Text="Praveen Kumar"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                TextColor="#1F2937"/>
+
+                            <Label
+                                Text="15 Games Played"
+                                FontSize="12"
+                                TextColor="#6B7280"/>
+
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="PK"
+                            FontAttributes="Bold"
+                            TextColor="#DC2626"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- SUMMARY -->
+                <Border
+                    Margin="0,8,0,0"
+                    Background="#ECFDF5"
+                    Stroke="#BBF7D0"
+                    StrokeShape="RoundRectangle 18">
+
+                    <VerticalStackLayout Padding="18"
+                                         Spacing="8">
+
+                        <Label
+                            Text="Selected Players"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            TextColor="#166534"/>
+
+                        <Grid ColumnDefinitions="*,Auto">
+
+                            <Label
+                                Text="Players Selected"
+                                FontSize="13"/>
+
+                            <Label
+                                Grid.Column="1"
+                                Text="1 / 6"
+                                FontAttributes="Bold"
+                                TextColor="#166534"/>
+
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,Auto">
+
+                            <Label
+                                Text="Minimum Required"
+                                FontSize="13"/>
+
+                            <Label
+                                Grid.Column="1"
+                                Text="2 Players"
+                                FontAttributes="Bold"
+                                TextColor="#166534"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <!-- CONTINUE BUTTON -->
+                <Border
+                    Background="#D1D5DB"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 16">
+
+                    <Grid HeightRequest="56">
+
+                        <Label
+                            Text="CONTINUE →"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            TextColor="#4B5563"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

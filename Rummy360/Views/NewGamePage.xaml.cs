@@ -6,4 +6,8 @@ public partial class NewGamePage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private async void StartGame_Tapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(SelectPlayersPage));
+    }
 }
