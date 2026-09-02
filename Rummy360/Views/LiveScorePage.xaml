@@ -290,7 +290,11 @@
                 Background="#0F7A3D"
                 StrokeThickness="0"
                 StrokeShape="RoundRectangle 18">
-
+                
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AddRound_Tapped"/>
+                </Border.GestureRecognizers>
+                
                 <Grid HeightRequest="58">
 
                     <Label Text="➕ ADD ROUND SCORE"
