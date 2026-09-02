@@ -2,300 +2,67 @@
     x:Class="Rummy360.Views.PlayersPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Shell.NavBarIsVisible="False"
-    BackgroundColor="#F5F7FA">
+    BackgroundColor="#F3F4F6">
 
-    <Grid RowDefinitions="100,Auto,*">
-
-        <!-- Header -->
-        <Border Grid.Row="0"
-                Background="#0F7A3D"
-                StrokeThickness="0">
-
-            <VerticalStackLayout
-                Padding="24,34,24,18"
-                Spacing="2">
-
-                <Label
-                    Text="Player Management"
-                    FontSize="13"
-                    TextColor="#CFE8DA"/>
-
-                <Label
-                    Text="Players"
-                    FontSize="28"
-                    FontAttributes="Bold"
-                    TextColor="White"/>
-
+    <Grid RowDefinitions="135,*">
+        <!-- Green Header -->
+        <Border Background="#0F7A3D">
+            <VerticalStackLayout Padding="24,42,24,18" Spacing="6">
+                <Label FontSize="13" Text="Player Management" TextColor="#A7F3D0"/>
+                <Label FontAttributes="Bold" FontSize="28" Text="Players" TextColor="White"/>
             </VerticalStackLayout>
-
         </Border>
-
-        <!-- Add Button -->
-        <Border Grid.Row="1"
-                Margin="20,-16,20,0"
-                Background="#0F7A3D"
-                StrokeThickness="0"
-                StrokeShape="RoundRectangle 16">
-
-            <Grid HeightRequest="54">
-
-                <Label
-                    Text="+ ADD PLAYER"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    FontSize="17"
-                    FontAttributes="Bold"
-                    TextColor="White"/>
-
-            </Grid>
-
-        </Border>
-
-        <!-- Player List -->
-        <ScrollView Grid.Row="2">
-
-            <VerticalStackLayout
-                Padding="20,24,20,30"
-                Spacing="16">
-
-                <!-- Player 1 -->
-                <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
-                    StrokeShape="RoundRectangle 18">
-
-                    <Grid Padding="16"
-                          ColumnDefinitions="50,*,Auto">
-
-                        <Border
-                            WidthRequest="42"
-                            HeightRequest="42"
-                            Background="#D4AF37"
-                            StrokeThickness="0"
-                            StrokeShape="RoundRectangle 21">
-
-                            <Label
-                                Text="BP"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                FontAttributes="Bold"
-                                TextColor="White"/>
-
-                        </Border>
-
-                        <VerticalStackLayout
-                            Grid.Column="1"
-                            Margin="12,0"
-                            Spacing="2">
-
-                            <Label
-                                Text="Bhanu Prakash"
-                                FontAttributes="Bold"
-                                FontSize="15"
-                                TextColor="#1F2937"/>
-
-                            <Label
-                                Text="12 Games Played"
-                                FontSize="12"
-                                TextColor="#6B7280"/>
-
-                        </VerticalStackLayout>
-
-                        <HorizontalStackLayout
-                            Grid.Column="2"
-                            Spacing="8"
-                            VerticalOptions="Center">
-
-                            <Label
-                                Text="✏️"
-                                FontSize="16"/>
-
-                            <Label
-                                Text="🗑️"
-                                FontSize="16"/>
-
-                        </HorizontalStackLayout>
-
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="18">
+                <!-- Add Player Button -->
+                <Border Background="#0F7A3D" StrokeShape="RoundRectangle 16">
+                    <Grid Padding="16">
+                        <Label HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" Text="+ ADD PLAYER" TextColor="White"/>
                     </Grid>
-
                 </Border>
+                <!-- Dynamic Player List -->
+                <CollectionView ItemsSource="{Binding Players}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="White" Padding="14" Margin="0,4" Stroke="#D1D5DB" StrokeShape="RoundRectangle 18">
+                                <Grid ColumnDefinitions="52,*,32,32">
+                                    <!-- Avatar -->
+                                    <Border WidthRequest="42" HeightRequest="42" BackgroundColor="{Binding AvatarColor}" StrokeShape="RoundRectangle 21">
+                                        <Label HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="14" Text="{Binding Initials}" TextColor="White"/>
+                                    </Border>
+                                    <!-- Player Details -->
+                                    <VerticalStackLayout Grid.Column="1" Spacing="2" Padding="12,0">
+                                        <Label FontAttributes="Bold" FontSize="18" Text="{Binding Name}" TextColor="#1F2937"/>
+                                        <Label FontSize="13" Text="{Binding GamesPlayed, StringFormat='{}{0} Games Played'}" TextColor="#6B7280"/>
+                                    </VerticalStackLayout>
+                                    <!-- Edit -->
+                                    <Label Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#D97706" FontSize="18" Text="✏️"/>
+                                    <!-- Delete -->
+                                    <Label Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" TextColor="#DC2626" FontSize="18" Text="🗑"/>
+                                </Grid>
+                                <Border.Shadow>
+                                    <Shadow Brush="#22000000" Offset="0,3" Opacity="0.20" Radius="10"/>
+                                </Border.Shadow>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
-                <!-- Player 2 -->
-                <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
-                    StrokeShape="RoundRectangle 18">
-
-                    <Grid Padding="16"
-                          ColumnDefinitions="50,*,Auto">
-
-                        <Border
-                            WidthRequest="42"
-                            HeightRequest="42"
-                            Background="#16A34A"
-                            StrokeThickness="0"
-                            StrokeShape="RoundRectangle 21">
-
-                            <Label
-                                Text="RK"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                FontAttributes="Bold"
-                                TextColor="White"/>
-
-                        </Border>
-
-                        <VerticalStackLayout
-                            Grid.Column="1"
-                            Margin="12,0"
-                            Spacing="2">
-
-                            <Label
-                                Text="Ramesh Kumar"
-                                FontAttributes="Bold"
-                                FontSize="15"
-                                TextColor="#1F2937"/>
-
-                            <Label
-                                Text="4 Games Played"
-                                FontSize="12"
-                                TextColor="#6B7280"/>
-
-                        </VerticalStackLayout>
-
-                        <HorizontalStackLayout
-                            Grid.Column="2"
-                            Spacing="8"
-                            VerticalOptions="Center">
-
-                            <Label
-                                Text="✏️"
-                                FontSize="16"/>
-
-                            <Label
-                                Text="🗑️"
-                                FontSize="16"/>
-
-                        </HorizontalStackLayout>
-
-                    </Grid>
-
-                </Border>
-
-                <!-- Player 3 -->
-                <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
-                    StrokeShape="RoundRectangle 18">
-
-                    <Grid Padding="16"
-                          ColumnDefinitions="50,*,Auto">
-
-                        <Border
-                            WidthRequest="42"
-                            HeightRequest="42"
-                            Background="#2563EB"
-                            StrokeThickness="0"
-                            StrokeShape="RoundRectangle 21">
-
-                            <Label
-                                Text="SK"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                FontAttributes="Bold"
-                                TextColor="White"/>
-
-                        </Border>
-
-                        <VerticalStackLayout
-                            Grid.Column="1"
-                            Margin="12,0"
-                            Spacing="2">
-
-                            <Label
-                                Text="Suresh Kumar"
-                                FontAttributes="Bold"
-                                FontSize="15"
-                                TextColor="#1F2937"/>
-
-                            <Label
-                                Text="0 Games Played"
-                                FontSize="12"
-                                TextColor="#6B7280"/>
-
-                        </VerticalStackLayout>
-
-                        <HorizontalStackLayout
-                            Grid.Column="2"
-                            Spacing="8"
-                            VerticalOptions="Center">
-
-                            <Label
-                                Text="✏️"
-                                FontSize="16"/>
-
-                            <Label
-                                Text="🗑️"
-                                FontSize="16"/>
-
-                        </HorizontalStackLayout>
-
-                    </Grid>
-
-                </Border>
-
-                <!-- Summary -->
-                <Border
-                    Margin="0,12,0,0"
-                    Background="#ECFDF5"
-                    Stroke="#BBF7D0"
-                    StrokeShape="RoundRectangle 18">
-
-                    <VerticalStackLayout
-                        Padding="18"
-                        Spacing="8">
-
-                        <Label
-                            Text="Player Summary"
-                            FontAttributes="Bold"
-                            FontSize="15"
-                            TextColor="#166534"/>
-
+                <!-- Summary Card -->
+                <Border Background="#ECFDF5" Padding="18" Stroke="#86EFAC" StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Spacing="12">
+                        <Label FontAttributes="Bold" FontSize="20" Text="Player Summary" TextColor="#166534"/>
                         <Grid ColumnDefinitions="*,Auto">
-
-                            <Label
-                                Text="Total Players"
-                                FontSize="13"/>
-
-                            <Label
-                                Grid.Column="1"
-                                Text="3"
-                                FontAttributes="Bold"/>
-
+                            <Label Text="Total Players" TextColor="#166534"/>
+                            <Label Grid.Column="1" FontAttributes="Bold" Text="4" TextColor="#166534"/>
                         </Grid>
-
                         <Grid ColumnDefinitions="*,Auto">
-
-                            <Label
-                                Text="Games Stored"
-                                FontSize="13"/>
-
-                            <Label
-                                Grid.Column="1"
-                                Text="16"
-                                FontAttributes="Bold"/>
-
+                            <Label Text="Games Stored" TextColor="#166534"/>
+                            <Label Grid.Column="1" FontAttributes="Bold" Text="39" TextColor="#166534"/>
                         </Grid>
-
                     </VerticalStackLayout>
-
                 </Border>
-
             </VerticalStackLayout>
-
         </ScrollView>
-
     </Grid>
-
 </ContentPage>
