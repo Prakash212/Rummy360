@@ -386,7 +386,11 @@
                     Background="#D1D5DB"
                     StrokeThickness="0"
                     StrokeShape="RoundRectangle 16">
-
+                    
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Continue_Tapped"/>
+                    </Border.GestureRecognizers>
+                    
                     <Grid HeightRequest="56">
 
                         <Label

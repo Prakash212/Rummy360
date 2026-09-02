@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Rummy360.Views.SeatingOrderPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="20">
+
+            <!-- HEADER -->
+            <Border Background="#0F7A3D"
+                    StrokeThickness="0">
+
+                <VerticalStackLayout Padding="24,34,24,24">
+
+                    <Label
+                        Text="Create New Game"
+                        FontSize="13"
+                        TextColor="#CFE8DA"/>
+
+                    <Label
+                        Text="Seating Order"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- TABLE -->
+            <Grid HeightRequest="360"
+                  Margin="20,0">
+
+                <!-- Outer Circle -->
+                <Border
+                    WidthRequest="220"
+                    HeightRequest="220"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Stroke="#D4AF37"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 110">
+
+                    <Grid>
+
+                        <Label
+                            Text="🃏"
+                            FontSize="34"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+                <!-- Dealer -->
+                <VerticalStackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    Margin="0,10,0,0"
+                    Spacing="4">
+
+                    <Label
+                        Text="👑 Dealer"
+                        HorizontalOptions="Center"
+                        FontSize="12"
+                        TextColor="#D4AF37"/>
+
+                    <Border
+                        WidthRequest="56"
+                        HeightRequest="56"
+                        Background="#0F7A3D"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 28">
+
+                        <Label
+                            Text="BP"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            FontAttributes="Bold"
+                            TextColor="White"/>
+
+                    </Border>
+
+                </VerticalStackLayout>
+
+                <!-- Right -->
+                <VerticalStackLayout
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    Margin="0,0,6,0"
+                    Spacing="4">
+
+                    <Border
+                        WidthRequest="56"
+                        HeightRequest="56"
+                        Background="#2563EB"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 28">
+
+                        <Label
+                            Text="RK"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            FontAttributes="Bold"
+                            TextColor="White"/>
+
+                    </Border>
+
+                    <Label
+                        Text="Ramesh"
+                        FontSize="11"
+                        HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+
+                <!-- Bottom -->
+                <VerticalStackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    Margin="0,0,0,12"
+                    Spacing="4">
+
+                    <Border
+                        WidthRequest="56"
+                        HeightRequest="56"
+                        Background="#EA580C"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 28">
+
+                        <Label
+                            Text="SK"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            FontAttributes="Bold"
+                            TextColor="White"/>
+
+                    </Border>
+
+                    <Label
+                        Text="Suresh"
+                        FontSize="11"
+                        HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+
+                <!-- Left -->
+                <VerticalStackLayout
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Margin="6,0,0,0"
+                    Spacing="4">
+
+                    <Border
+                        WidthRequest="56"
+                        HeightRequest="56"
+                        Background="#16A34A"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 28">
+
+                        <Label
+                            Text="KK"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            FontAttributes="Bold"
+                            TextColor="White"/>
+
+                    </Border>
+
+                    <Label
+                        Text="Kiran"
+                        FontSize="11"
+                        HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+
+            </Grid>
+
+            <!-- INFO -->
+            <Border
+                Margin="20,0"
+                Background="#ECFDF5"
+                Stroke="#BBF7D0"
+                StrokeShape="RoundRectangle 18">
+
+                <VerticalStackLayout Padding="18"
+                                     Spacing="8">
+
+                    <Label
+                        Text="Dealer Rotation"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        TextColor="#166534"/>
+
+                    <Label
+                        Text="After every round, the dealer automatically moves clockwise."
+                        FontSize="12"
+                        TextColor="#166534"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- PLAY ORDER -->
+            <Border
+                Margin="20,0"
+                Background="White"
+                Stroke="#E5E7EB"
+                StrokeShape="RoundRectangle 18">
+
+                <VerticalStackLayout Padding="18"
+                                     Spacing="12">
+
+                    <Label
+                        Text="PLAY ORDER"
+                        FontSize="12"
+                        TextColor="#6B7280"/>
+
+                    <Grid ColumnDefinitions="32,*">
+                        <Label Text="①"
+                               FontSize="18"
+                               TextColor="#D4AF37"/>
+                        <Label Grid.Column="1"
+                               Text="Bhanu Prakash (Dealer)"
+                               FontAttributes="Bold"
+                               TextColor="#0F7A3D"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="32,*">
+                        <Label Text="②"
+                               FontSize="18"
+                               TextColor="#2563EB"/>
+                        <Label Grid.Column="1"
+                               Text="Ramesh Kumar"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="32,*">
+                        <Label Text="③"
+                               FontSize="18"
+                               TextColor="#EA580C"/>
+                        <Label Grid.Column="1"
+                               Text="Suresh Kumar"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="32,*">
+                        <Label Text="④"
+                               FontSize="18"
+                               TextColor="#16A34A"/>
+                        <Label Grid.Column="1"
+                               Text="Kiran Kumar"/>
+                    </Grid>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- START ROUND -->
+            <Border
+                Margin="20,0,20,28"
+                Background="#0F7A3D"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16">
+
+                <Grid HeightRequest="56">
+
+                    <Label
+                        Text="START ROUND 1 →"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="17"
+                        TextColor="White"/>
+
+                </Grid>
+
+            </Border>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
