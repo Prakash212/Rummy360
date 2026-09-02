@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Rummy360.Services;
 
 namespace Rummy360
 {
@@ -18,6 +19,7 @@ namespace Rummy360
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<PlayerService>();
 
             return builder.Build();
         }
