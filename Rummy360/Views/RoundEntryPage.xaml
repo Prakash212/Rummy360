@@ -139,6 +139,9 @@
             <VerticalStackLayout Margin="20,0,20,30" Spacing="12">
                 <!-- Save -->
                 <Border Background="#0F7A3D" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SaveRound_Tapped"/>
+                    </Border.GestureRecognizers>
                     <Grid HeightRequest="56">
                         <Label Text="SAVE ROUND →" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" TextColor="White"/>
                     </Grid>

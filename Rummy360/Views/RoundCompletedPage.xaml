@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="Rummy360.Views.RoundCompletedPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="18">
+            <!-- Green Header -->
+            <Border Background="#0F7A3D" StrokeThickness="0">
+                <VerticalStackLayout Padding="24,34,24,24">
+                    <Label FontSize="13" Text="Round Completed" TextColor="#CFE8DA" />
+                    <Label FontAttributes="Bold" FontSize="26" Text="Round 2 Finished 🎉" TextColor="White" />
+                </VerticalStackLayout>
+            </Border>
+            <!-- Winner Card -->
+            <Border Margin="20,0" Background="#FFF7ED" Stroke="#FBBF24" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="6">
+                    <Label FontAttributes="Bold" FontSize="13" Text="ROUND WINNER" TextColor="#B45309" />
+                    <Label FontAttributes="Bold" FontSize="22" Text="🏆 Kiran Kumar" TextColor="#B45309" />
+                    <Label FontSize="13" Text="Scored only 5 points this round." TextColor="#92400E" />
+                </VerticalStackLayout>
+            </Border>
+            <!-- Dealer Rotation -->
+            <Border Margin="20,0" Background="#ECFDF5" Stroke="#BBF7D0" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="6">
+                    <Label FontAttributes="Bold" FontSize="13" Text="DEALER ROTATED" TextColor="#166534" />
+                    <Label FontAttributes="Bold" FontSize="20" Text="👑 Ramesh Kumar" TextColor="#166534" />
+                    <Label FontSize="13" Text="Dealer moved clockwise." TextColor="#166534" />
+                </VerticalStackLayout>
+            </Border>
+            <!-- Updated Totals -->
+            <Border Margin="20,0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+                <VerticalStackLayout Padding="18" Spacing="12">
+                    <Label FontAttributes="Bold" FontSize="13" Text="UPDATED GRAND TOTAL" TextColor="#6B7280" />
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="👑 Bhanu Prakash" TextColor="#0F7A3D" />
+                        <Label Grid.Column="1" FontAttributes="Bold" Text="30" TextColor="#0F7A3D" />
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Ramesh Kumar" TextColor="#2563EB" />
+                        <Label Grid.Column="1" FontAttributes="Bold" Text="25" TextColor="#2563EB" />
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Suresh Kumar" TextColor="#EA580C" />
+                        <Label Grid.Column="1" FontAttributes="Bold" Text="40" TextColor="#EA580C" />
+                    </Grid>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Kiran Kumar" TextColor="#16A34A" />
+                        <Label Grid.Column="1" FontAttributes="Bold" Text="10" TextColor="#16A34A" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <!-- Continue Button -->
+            <Border Margin="20,0" Background="#0F7A3D" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                <Grid HeightRequest="56">
+                    <Label FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" Text="CONTINUE TO ROUND 3 →" TextColor="White" VerticalOptions="Center" />
+                </Grid>
+            </Border>
+            <!-- View History -->
+            <Border Margin="20,0,20,24" Background="#F3F4F6" Stroke="#E5E7EB" StrokeShape="RoundRectangle 16">
+                <Grid HeightRequest="48">
+                    <Label HorizontalOptions="Center" Text="VIEW ROUND HISTORY" TextColor="#4B5563" VerticalOptions="Center" />
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

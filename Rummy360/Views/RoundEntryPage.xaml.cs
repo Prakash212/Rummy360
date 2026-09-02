@@ -6,4 +6,8 @@ public partial class RoundEntryPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private async void SaveRound_Tapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(RoundCompletedPage));
+    }
 }
