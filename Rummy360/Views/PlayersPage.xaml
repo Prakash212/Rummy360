@@ -16,6 +16,9 @@
             <VerticalStackLayout Padding="20" Spacing="18">
                 <!-- Add Player Button -->
                 <Border Background="#0F7A3D" StrokeShape="RoundRectangle 16">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AddPlayerTapped"/>
+                    </Border.GestureRecognizers>
                     <Grid Padding="16">
                         <Label HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" Text="+ ADD PLAYER" TextColor="White"/>
                     </Grid>
