@@ -53,6 +53,9 @@
             </Border>
             <!-- SETTINGS -->
             <Border Grid.Row="1" Grid.Column="0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Settings_Tapped"/>
+                </Border.GestureRecognizers>
                 <VerticalStackLayout Padding="18" Spacing="8">
                     <Label Text="⚙️" FontSize="26"/>
                     <Label Text="Settings" FontSize="15" FontAttributes="Bold" TextColor="#1F2937"/>

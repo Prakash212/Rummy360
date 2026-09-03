@@ -18,4 +18,8 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(StatisticsPage));
     }
+    private async void Settings_Tapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(SettingsPage));
+    }
 }

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Rummy360.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F3F4F6">
+
+    <Grid RowDefinitions="170,*">
+        <!-- HEADER -->
+        <Border Background="#0F7A3D">
+            <VerticalStackLayout Padding="24,50,24,24" Spacing="6">
+                <Label Text="Preferences" FontSize="13" TextColor="#A7F3D0"/>
+                <Label Text="Settings" FontSize="30" FontAttributes="Bold" TextColor="White"/>
+            </VerticalStackLayout>
+        </Border>
+        <!-- BODY -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="18">
+                <!-- DEFAULT GAME -->
+                <Border Background="#ECFDF5" Stroke="#A7F3D0" StrokeShape="RoundRectangle 18" Padding="18">
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Label Text="🎮" FontSize="26"/>
+                        <VerticalStackLayout Grid.Column="1" Padding="12,0" Spacing="2">
+                            <Label Text="DEFAULT GAME TYPE" FontSize="12" FontAttributes="Bold" TextColor="#166534"/>
+                            <Label Text="101 Points" FontSize="22" FontAttributes="Bold" TextColor="#166534"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+                <!-- APPEARANCE -->
+                <Border Background="White" Stroke="#D1D5DB" StrokeShape="RoundRectangle 18" Padding="18">
+                    <VerticalStackLayout Spacing="18">
+                        <Label Text="Appearance" FontSize="18" FontAttributes="Bold" TextColor="#1F2937"/>
+                        <Grid ColumnDefinitions="Auto,*,Auto">
+                            <Label Text="🌙" FontSize="22"/>
+                            <Label Grid.Column="1" Margin="12,0" Text="Dark Theme" VerticalOptions="Center"/>
+                            <Switch Grid.Column="2" IsToggled="True" OnColor="#16A34A"/>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto,*,Auto">
+                            <Label Text="🔊" FontSize="22"/>
+                            <Label Grid.Column="1" Margin="12,0" Text="Sound Effects" VerticalOptions="Center"/>    
+                            <Switch Grid.Column="2" IsToggled="True" OnColor="#16A34A"/>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto,*,Auto">
+                            <Label Text="📳" FontSize="22"/>
+                            <Label Grid.Column="1" Margin="12,0" Text="Vibration" VerticalOptions="Center"/>
+                            <Switch Grid.Column="2" IsToggled="False" OnColor="#16A34A"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+                <!-- BACKUP -->
+                <Border Background="White" Stroke="#D1D5DB" StrokeShape="RoundRectangle 18" Padding="18">
+                    <VerticalStackLayout Spacing="18">
+                        <Label Text="Backup &amp; Restore" FontSize="18" FontAttributes="Bold" TextColor="#1F2937"/>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Label Text="💾" FontSize="22"/>
+                            <Label Grid.Column="1" Margin="12,0" Text="Backup Game Data" VerticalOptions="Center"/>
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Label Text="📤" FontSize="22"/>
+                            <Label Grid.Column="1" Margin="12,0" Text="Export Statistics" VerticalOptions="Center"/>    
+                        </Grid>
+                        <Grid ColumnDefinitions="Auto,*">
+                            <Label Text="📥" FontSize="22"/>
+                            <Label Grid.Column="1" Margin="12,0" Text="Import Backup" VerticalOptions="Center"/>
+                        </Grid> 
+                    </VerticalStackLayout>
+                </Border>
+                <!-- OFFLINE -->
+                <Border Background="#ECFDF5" Stroke="#BBF7D0" StrokeShape="RoundRectangle 18" Padding="18">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Offline First" FontSize="18" FontAttributes="Bold" TextColor="#166534"/>
+                        <Label Text="All games are stored securely on your device. Internet is never required to play." FontSize="14" TextColor="#166534"/>
+                    </VerticalStackLayout>
+                </Border>
+                <!-- ABOUT -->
+                <Border Background="White" Stroke="#D1D5DB" StrokeShape="RoundRectangle 18" Padding="18">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="About Rummy360" FontSize="18" FontAttributes="Bold" TextColor="#1F2937"/>
+                        <Label Text="Version 1.0.0" TextColor="#374151"/>
+                        <Label Text="Made with ❤️ in India" TextColor="#6B7280"/>
+                        <Label Text="Offline Score Tracker" TextColor="#6B7280"/>
+                    </VerticalStackLayout>
+                </Border>
+                <!-- DANGER -->
+                <Border Background="#FEF2F2" Stroke="#FECACA" StrokeShape="RoundRectangle 18" Padding="18">
+                    <VerticalStackLayout Spacing="8">
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="🗑️" FontSize="24"/>
+                            <Label Text="Delete All Game Data" FontAttributes="Bold" TextColor="#DC2626" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                        <Label Text="This removes every saved game permanently." FontSize="13" TextColor="#B91C1C"/>
+                    </VerticalStackLayout>
+                </Border>
+                <!-- FOOTER -->
+                <Label HorizontalOptions="Center" Margin="0,12,0,20" FontSize="12" Text="Rummy360 • Offline First • Version 1.0" TextColor="#9CA3AF"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
