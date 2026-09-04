@@ -5,14 +5,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Shell.NavBarIsVisible="False"
-    BackgroundColor="#F5F7FA">
+    BackgroundColor="{StaticResource PageBackgroundAlt}">
 
     <ScrollView>
 
         <VerticalStackLayout Spacing="20">
 
             <!-- HEADER -->
-            <Border Background="#0F7A3D"
+            <Border Background="{StaticResource PrimaryGreen}"
                     StrokeThickness="0">
 
                 <VerticalStackLayout Padding="24,34,24,24">
@@ -20,13 +20,13 @@
                     <Label
                         Text="Create New Game"
                         FontSize="13"
-                        TextColor="#CFE8DA"/>
+                        TextColor="{StaticResource PrimaryGreenSoftText}"/>
 
                     <Label
-                        Text="Seating Order"
-                        FontSize="28"
-                        FontAttributes="Bold"
-                        TextColor="White"/>
+                            Text="Seating Order"
+                            FontSize="28"
+                            FontAttributes="Bold"
+                            TextColor="{StaticResource WhiteBrush}"/>
 
                 </VerticalStackLayout>
 
@@ -37,12 +37,12 @@
                   Margin="20,0">
 
                 <!-- Outer Circle -->
-                <Border
+                    <Border
                     WidthRequest="220"
                     HeightRequest="220"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    Stroke="#D4AF37"
+                    Stroke="{StaticResource GoldDark}"
                     StrokeThickness="3"
                     StrokeShape="RoundRectangle 110">
 
@@ -69,12 +69,12 @@
                         Text="👑 Dealer"
                         HorizontalOptions="Center"
                         FontSize="12"
-                        TextColor="#D4AF37"/>
+                        TextColor="{StaticResource GoldDarkBrush}"/>
 
                     <Border
                         WidthRequest="56"
                         HeightRequest="56"
-                        Background="#0F7A3D"
+                        Background="{StaticResource PrimaryGreen}"
                         StrokeThickness="0"
                         StrokeShape="RoundRectangle 28">
 
@@ -83,7 +83,7 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             FontAttributes="Bold"
-                            TextColor="White"/>
+                            TextColor="{StaticResource WhiteBrush}"/>
 
                     </Border>
 
@@ -99,7 +99,7 @@
                     <Border
                         WidthRequest="56"
                         HeightRequest="56"
-                        Background="#2563EB"
+                        Background="{StaticResource AvatarBlue}"
                         StrokeThickness="0"
                         StrokeShape="RoundRectangle 28">
 
@@ -108,7 +108,7 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             FontAttributes="Bold"
-                            TextColor="White"/>
+                            TextColor="{StaticResource WhiteBrush}"/>
 
                     </Border>
 
@@ -129,7 +129,7 @@
                     <Border
                         WidthRequest="56"
                         HeightRequest="56"
-                        Background="#EA580C"
+                        Background="{StaticResource AvatarOrange}"
                         StrokeThickness="0"
                         StrokeShape="RoundRectangle 28">
 
@@ -138,7 +138,7 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             FontAttributes="Bold"
-                            TextColor="White"/>
+                            TextColor="{StaticResource WhiteBrush}"/>
 
                     </Border>
 
@@ -159,7 +159,7 @@
                     <Border
                         WidthRequest="56"
                         HeightRequest="56"
-                        Background="#16A34A"
+                        Background="{StaticResource AccentGreen}"
                         StrokeThickness="0"
                         StrokeShape="RoundRectangle 28">
 
@@ -168,7 +168,7 @@
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
                             FontAttributes="Bold"
-                            TextColor="White"/>
+                            TextColor="{StaticResource WhiteBrush}"/>
 
                     </Border>
 
@@ -184,8 +184,8 @@
             <!-- INFO -->
             <Border
                 Margin="20,0"
-                Background="#ECFDF5"
-                Stroke="#BBF7D0"
+                Background="{StaticResource SuccessBackground}"
+                Stroke="{StaticResource SuccessBorderLight}"
                 StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18"
@@ -195,12 +195,12 @@
                         Text="Dealer Rotation"
                         FontAttributes="Bold"
                         FontSize="15"
-                        TextColor="#166534"/>
+                        TextColor="{StaticResource PrimaryGreenDark}"/>
 
                     <Label
                         Text="After every round, the dealer automatically moves clockwise."
                         FontSize="12"
-                        TextColor="#166534"/>
+                        TextColor="{StaticResource PrimaryGreenDark}"/>
 
                 </VerticalStackLayout>
 
@@ -209,8 +209,8 @@
             <!-- PLAY ORDER -->
             <Border
                 Margin="20,0"
-                Background="White"
-                Stroke="#E5E7EB"
+                Background="{StaticResource CardBackground}"
+                Stroke="{StaticResource BorderStrokeLight}"
                 StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18"
@@ -219,22 +219,22 @@
                     <Label
                         Text="PLAY ORDER"
                         FontSize="12"
-                        TextColor="#6B7280"/>
+                        TextColor="{StaticResource SecondaryText}"/>
 
                     <Grid ColumnDefinitions="32,*">
                         <Label Text="①"
                                FontSize="18"
-                               TextColor="#D4AF37"/>
+                               TextColor="{StaticResource GoldDarkBrush}"/>
                         <Label Grid.Column="1"
                                Text="Bhanu Prakash (Dealer)"
                                FontAttributes="Bold"
-                               TextColor="#0F7A3D"/>
+                               TextColor="{StaticResource PrimaryGreen}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="32,*">
                         <Label Text="②"
                                FontSize="18"
-                               TextColor="#2563EB"/>
+                               TextColor="{StaticResource AvatarBlue}"/>
                         <Label Grid.Column="1"
                                Text="Ramesh Kumar"/>
                     </Grid>
@@ -242,7 +242,7 @@
                     <Grid ColumnDefinitions="32,*">
                         <Label Text="③"
                                FontSize="18"
-                               TextColor="#EA580C"/>
+                               TextColor="{StaticResource AvatarOrange}"/>
                         <Label Grid.Column="1"
                                Text="Suresh Kumar"/>
                     </Grid>
@@ -250,7 +250,7 @@
                     <Grid ColumnDefinitions="32,*">
                         <Label Text="④"
                                FontSize="18"
-                               TextColor="#16A34A"/>
+                               TextColor="{StaticResource AccentGreen}"/>
                         <Label Grid.Column="1"
                                Text="Kiran Kumar"/>
                     </Grid>
@@ -262,7 +262,7 @@
             <!-- START ROUND -->
             <Border
                 Margin="20,0,20,28"
-                Background="#0F7A3D"
+                Background="{StaticResource PrimaryGreen}"
                 StrokeThickness="0"
                 StrokeShape="RoundRectangle 16">
                 
@@ -278,7 +278,7 @@
                         VerticalOptions="Center"
                         FontAttributes="Bold"
                         FontSize="17"
-                        TextColor="White"/>
+                        TextColor="{StaticResource WhiteBrush}"/>
 
                 </Grid>
 

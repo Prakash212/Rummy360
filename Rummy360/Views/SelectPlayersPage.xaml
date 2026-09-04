@@ -5,14 +5,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Shell.NavBarIsVisible="False"
-    BackgroundColor="#F5F7FA">
+    BackgroundColor="{StaticResource PageBackgroundAlt}">
 
     <Grid RowDefinitions="95,*">
 
         <!-- HEADER -->
         <Border
             Grid.Row="0"
-            Background="#0F7A3D"
+            Background="{StaticResource PrimaryGreen}"
             StrokeThickness="0">
 
             <VerticalStackLayout Padding="24,34,24,18">
@@ -20,13 +20,13 @@
                 <Label
                     Text="Create New Game"
                     FontSize="13"
-                    TextColor="#CFE8DA"/>
+                    TextColor="{StaticResource PrimaryGreenSoftText}"/>
 
                 <Label
                     Text="Select Players"
                     FontSize="26"
                     FontAttributes="Bold"
-                    TextColor="White"/>
+                    TextColor="{StaticResource White}"/>
 
             </VerticalStackLayout>
 
@@ -40,8 +40,8 @@
 
                 <!-- INFO BOX -->
                 <Border
-                    Background="#ECFDF5"
-                    Stroke="#BBF7D0"
+                    Background="{StaticResource SuccessBackground}"
+                    Stroke="{StaticResource SuccessBorderLight}"
                     StrokeShape="RoundRectangle 14">
 
                     <HorizontalStackLayout Padding="14"
@@ -49,12 +49,12 @@
 
                         <Label Text="✔"
                                FontSize="18"
-                               TextColor="#16A34A"/>
+                               TextColor="{StaticResource AccentGreen}"/>
 
                         <Label
                             Text="Select between 2 and 6 players."
                             FontSize="13"
-                            TextColor="#166534"/>
+                            TextColor="{StaticResource PrimaryGreenDark}"/>
 
                     </HorizontalStackLayout>
 
@@ -62,26 +62,26 @@
 
                 <!-- PLAYER 1 -->
                 <Border
-                    Background="White"
-                    Stroke="#16A34A"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource AccentGreenBrush}"
                     StrokeShape="RoundRectangle 18">
 
                     <Grid Padding="16"
                           ColumnDefinitions="40,*,Auto">
 
-                        <Border
-                            WidthRequest="28"
-                            HeightRequest="28"
-                            Background="#16A34A"
-                            StrokeThickness="0"
-                            StrokeShape="RoundRectangle 14">
+                            <Border
+                                WidthRequest="28"
+                                HeightRequest="28"
+                                Background="{StaticResource AccentGreen}"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 14">
 
                             <Label
                                 Text="✓"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 FontAttributes="Bold"
-                                TextColor="White"/>
+                                TextColor="{StaticResource White}"/>
 
                         </Border>
 
@@ -93,30 +93,31 @@
                                 Text="Bhanu Prakash"
                                 FontAttributes="Bold"
                                 FontSize="15"
-                                TextColor="#1F2937"/>
+                                TextColor="{StaticResource PrimaryText}"/>
 
                             <Label
                                 Text="12 Games Played"
                                 FontSize="12"
-                                TextColor="#6B7280"/>
+                                TextColor="{StaticResource SecondaryText}"/>
 
                         </VerticalStackLayout>
 
-                        <Label
-                            Grid.Column="2"
+                    <Label
+                                Grid.Column="2"
                             Text="BP"
                             FontAttributes="Bold"
-                            TextColor="#D4AF37"
+                            TextColor="{StaticResource GoldDarkBrush}" 
                             VerticalOptions="Center"/>
 
                     </Grid>
 
                 </Border>
 
+                <!-- UNSELECTED PLAYERS (RESOURCE COLORS) -->
                 <!-- PLAYER 2 -->
                 <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLightBrush}"
                     StrokeShape="RoundRectangle 18">
 
                     <Grid Padding="16"
@@ -125,7 +126,7 @@
                         <Border
                             WidthRequest="28"
                             HeightRequest="28"
-                            Background="#E5E7EB"
+                            Background="{StaticResource BorderStrokeLight}"
                             StrokeThickness="0"
                             StrokeShape="RoundRectangle 14"/>
 
@@ -137,12 +138,12 @@
                                 Text="Ramesh Kumar"
                                 FontAttributes="Bold"
                                 FontSize="15"
-                                TextColor="#1F2937"/>
+                                TextColor="{StaticResource PrimaryText}"/>
 
                             <Label
                                 Text="4 Games Played"
                                 FontSize="12"
-                                TextColor="#6B7280"/>
+                                TextColor="{StaticResource SecondaryText}"/>
 
                         </VerticalStackLayout>
 
@@ -150,7 +151,7 @@
                             Grid.Column="2"
                             Text="RK"
                             FontAttributes="Bold"
-                            TextColor="#16A34A"
+                            TextColor="{StaticResource AccentGreen}"
                             VerticalOptions="Center"/>
 
                     </Grid>
@@ -159,8 +160,8 @@
 
                 <!-- PLAYER 3 -->
                 <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLightBrush}"
                     StrokeShape="RoundRectangle 18">
 
                     <Grid Padding="16"
@@ -169,7 +170,7 @@
                         <Border
                             WidthRequest="28"
                             HeightRequest="28"
-                            Background="#E5E7EB"
+                            Background="{StaticResource BorderStrokeLight}"
                             StrokeThickness="0"
                             StrokeShape="RoundRectangle 14"/>
 
@@ -181,12 +182,12 @@
                                 Text="Suresh Kumar"
                                 FontAttributes="Bold"
                                 FontSize="15"
-                                TextColor="#1F2937"/>
+                                TextColor="{StaticResource PrimaryText}"/>
 
                             <Label
                                 Text="0 Games Played"
                                 FontSize="12"
-                                TextColor="#6B7280"/>
+                                TextColor="{StaticResource SecondaryText}"/>
 
                         </VerticalStackLayout>
 
@@ -194,17 +195,18 @@
                             Grid.Column="2"
                             Text="SK"
                             FontAttributes="Bold"
-                            TextColor="#2563EB"
+                            TextColor="{StaticResource AvatarBlue}"
                             VerticalOptions="Center"/>
 
                     </Grid>
 
                 </Border>
 
+                <!-- /UNSELECTED PLAYERS (RESOURCE COLORS) -->
                 <!-- PLAYER 4 -->
                 <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                     <Grid Padding="16"
@@ -213,7 +215,7 @@
                         <Border
                             WidthRequest="28"
                             HeightRequest="28"
-                            Background="#E5E7EB"
+                            Background="{StaticResource BorderStrokeLight}"
                             StrokeThickness="0"
                             StrokeShape="RoundRectangle 14"/>
 
@@ -225,12 +227,12 @@
                                 Text="Kiran Kumar"
                                 FontAttributes="Bold"
                                 FontSize="15"
-                                TextColor="#1F2937"/>
+                            TextColor="{StaticResource PrimaryText}"/>
 
                             <Label
                                 Text="8 Games Played"
                                 FontSize="12"
-                                TextColor="#6B7280"/>
+                                TextColor="{StaticResource SecondaryText}"/>
 
                         </VerticalStackLayout>
 
@@ -238,7 +240,7 @@
                             Grid.Column="2"
                             Text="KK"
                             FontAttributes="Bold"
-                            TextColor="#EA580C"
+                            TextColor="{StaticResource AvatarOrange}"
                             VerticalOptions="Center"/>
 
                     </Grid>
@@ -247,8 +249,8 @@
 
                 <!-- PLAYER 5 -->
                 <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                     <Grid Padding="16"
@@ -257,7 +259,7 @@
                         <Border
                             WidthRequest="28"
                             HeightRequest="28"
-                            Background="#E5E7EB"
+                            Background="{StaticResource BorderStrokeLight}"
                             StrokeThickness="0"
                             StrokeShape="RoundRectangle 14"/>
 
@@ -269,12 +271,12 @@
                                 Text="Sai Krishna"
                                 FontAttributes="Bold"
                                 FontSize="15"
-                                TextColor="#1F2937"/>
+                                TextColor="{StaticResource PrimaryText}"/>
 
                             <Label
                                 Text="2 Games Played"
                                 FontSize="12"
-                                TextColor="#6B7280"/>
+                                TextColor="{StaticResource SecondaryText}"/>
 
                         </VerticalStackLayout>
 
@@ -282,7 +284,7 @@
                             Grid.Column="2"
                             Text="SK"
                             FontAttributes="Bold"
-                            TextColor="#7C3AED"
+                            TextColor="{StaticResource AvatarPurple}"
                             VerticalOptions="Center"/>
 
                     </Grid>
@@ -291,8 +293,8 @@
 
                 <!-- PLAYER 6 -->
                 <Border
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                     <Grid Padding="16"
@@ -301,7 +303,7 @@
                         <Border
                             WidthRequest="28"
                             HeightRequest="28"
-                            Background="#E5E7EB"
+                            Background="{StaticResource BorderStrokeLight}"
                             StrokeThickness="0"
                             StrokeShape="RoundRectangle 14"/>
 
@@ -313,12 +315,12 @@
                                 Text="Praveen Kumar"
                                 FontAttributes="Bold"
                                 FontSize="15"
-                                TextColor="#1F2937"/>
+                                TextColor="{StaticResource PrimaryText}"/>
 
                             <Label
                                 Text="15 Games Played"
                                 FontSize="12"
-                                TextColor="#6B7280"/>
+                                TextColor="{StaticResource SecondaryText}"/>
 
                         </VerticalStackLayout>
 
@@ -326,7 +328,7 @@
                             Grid.Column="2"
                             Text="PK"
                             FontAttributes="Bold"
-                            TextColor="#DC2626"
+                            TextColor="{StaticResource DangerText}"
                             VerticalOptions="Center"/>
 
                     </Grid>
@@ -336,8 +338,8 @@
                 <!-- SUMMARY -->
                 <Border
                     Margin="0,8,0,0"
-                    Background="#ECFDF5"
-                    Stroke="#BBF7D0"
+                    Background="{StaticResource SuccessBackground}"
+                    Stroke="{StaticResource SuccessBorderLight}"
                     StrokeShape="RoundRectangle 18">
 
                     <VerticalStackLayout Padding="18"
@@ -347,7 +349,7 @@
                             Text="Selected Players"
                             FontSize="15"
                             FontAttributes="Bold"
-                            TextColor="#166534"/>
+                            TextColor="{StaticResource PrimaryGreenDark}"/>
 
                         <Grid ColumnDefinitions="*,Auto">
 
@@ -359,7 +361,7 @@
                                 Grid.Column="1"
                                 Text="1 / 6"
                                 FontAttributes="Bold"
-                                TextColor="#166534"/>
+                                TextColor="{StaticResource PrimaryGreenDark}"/>
 
                         </Grid>
 
@@ -373,7 +375,7 @@
                                 Grid.Column="1"
                                 Text="2 Players"
                                 FontAttributes="Bold"
-                                TextColor="#166534"/>
+                                TextColor="{StaticResource PrimaryGreenDark}"/>
 
                         </Grid>
 
@@ -383,7 +385,7 @@
 
                 <!-- CONTINUE BUTTON -->
                 <Border
-                    Background="#D1D5DB"
+                    Background="{StaticResource BorderGray}"
                     StrokeThickness="0"
                     StrokeShape="RoundRectangle 16">
                     
@@ -397,7 +399,7 @@
                             Text="CONTINUE →"
                             FontAttributes="Bold"
                             FontSize="16"
-                            TextColor="#4B5563"
+                            TextColor="{StaticResource MutedGray}"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"/>
 

@@ -21,15 +21,54 @@
         Title="Players"
         Route="PlayersPage"
         ContentTemplate="{DataTemplate views:PlayersPage}" />
-    
-    <ShellContent
-        Title="Players"
-        Route="PlayersPage"
-        ContentTemplate="{DataTemplate views:PlayersPage}" />
-
     <ShellContent
         Title="New Game"
         Route="NewGamePage"
         ContentTemplate="{DataTemplate views:NewGamePage}" />
+
+    <ShellContent
+        Title="Add Player"
+        Route="AddPlayerPage"
+        ContentTemplate="{DataTemplate views:AddPlayerPage}" />
+
+    <ShellContent
+        Title="Settings"
+        Route="SettingsPage"
+        ContentTemplate="{DataTemplate views:SettingsPage}" />
+
+    <ShellContent
+        Title="Live Game"
+        Route="LiveScorePage"
+        ContentTemplate="{DataTemplate views:LiveScorePage}" />
+
+    <ShellContent
+        Title="Round Completed"
+        Route="RoundCompletedPage"
+        ContentTemplate="{DataTemplate views:RoundCompletedPage}" />
+
+    <ShellContent
+        Title="Round Entry"
+        Route="RoundEntryPage"
+        ContentTemplate="{DataTemplate views:RoundEntryPage}" />
+
+    <ShellContent
+        Title="Round History"
+        Route="RoundHistoryPage"
+        ContentTemplate="{DataTemplate views:RoundHistoryPage}" />
+
+    <ShellContent
+        Title="Seating Order"
+        Route="SeatingOrderPage"
+        ContentTemplate="{DataTemplate views:SeatingOrderPage}" />
+
+    <ShellContent
+        Title="Select Players"
+        Route="SelectPlayersPage"
+        ContentTemplate="{DataTemplate views:SelectPlayersPage}" />
+
+    <ShellContent
+        Title="Statistics"
+        Route="StatisticsPage"
+        ContentTemplate="{DataTemplate views:StatisticsPage}" />
 
 </Shell>

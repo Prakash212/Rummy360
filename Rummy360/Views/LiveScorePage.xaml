@@ -5,25 +5,25 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Shell.NavBarIsVisible="False"
-    BackgroundColor="#F5F7FA">
+    BackgroundColor="{StaticResource PageBackgroundAlt}">
 
     <ScrollView>
 
         <VerticalStackLayout Spacing="18">
 
             <!-- HEADER -->
-            <Border Background="#0F7A3D" StrokeThickness="0">
+            <Border Background="{StaticResource PrimaryGreen}" StrokeThickness="0">
 
                 <VerticalStackLayout Padding="24,34,24,24">
 
                     <Label Text="Live Game"
                            FontSize="13"
-                           TextColor="#CFE8DA"/>
+                           TextColor="{StaticResource PrimaryGreenSoftText}"/>
 
                     <Label Text="Round 1 / Game 101"
                            FontSize="26"
                            FontAttributes="Bold"
-                           TextColor="White"/>
+                           TextColor="{StaticResource White}"/>
 
                 </VerticalStackLayout>
 
@@ -31,19 +31,19 @@
 
             <!-- GAME INFO CARD -->
             <Border Margin="20,0"
-                    Background="#ECFDF5"
-                    Stroke="#BBF7D0"
+                    Background="{StaticResource SuccessBackground}"
+                    Stroke="{StaticResource SuccessBorderLight}"
                     StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="8">
 
                     <Label Text="👑 Dealer : Bhanu Prakash"
                            FontAttributes="Bold"
-                           TextColor="#166534"/>
+                           TextColor="{StaticResource PrimaryGreenDark}"/>
 
                     <Label Text="Drop Amount : 40 Points"
                            FontSize="13"
-                           TextColor="#166534"/>
+                           TextColor="{StaticResource PrimaryGreenDark}"/>
 
                 </VerticalStackLayout>
 
@@ -51,25 +51,25 @@
 
             <!-- CURRENT ROUND SCORE CARD -->
             <Border Margin="20,0"
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="14">
 
                     <Label Text="CURRENT ROUND SCORES"
                            FontSize="12"
-                           TextColor="#6B7280"/>
+                           TextColor="{StaticResource SecondaryText}"/>
 
                     <!-- Bhanu -->
                     <Grid ColumnDefinitions="*,60">
                         <Label Text="👑 Bhanu Prakash"
                                FontAttributes="Bold"
-                               TextColor="#0F7A3D"/>
+                               TextColor="{StaticResource PrimaryGreen}"/>
 
                         <Border Grid.Column="1"
-                                Background="#F3F4F6"
-                                Stroke="#E5E7EB"
+                                Background="{StaticResource PageBackground}"
+                                Stroke="{StaticResource BorderStrokeLight}"
                                 StrokeShape="RoundRectangle 10"
                                 Padding="8,6">
 
@@ -83,11 +83,11 @@
                     <!-- Ramesh -->
                     <Grid ColumnDefinitions="*,60">
                         <Label Text="Ramesh Kumar"
-                               TextColor="#2563EB"/>
+                               TextColor="{StaticResource AvatarBlue}"/>
 
                         <Border Grid.Column="1"
-                                Background="#F3F4F6"
-                                Stroke="#E5E7EB"
+                                Background="{StaticResource PageBackground}"
+                                Stroke="{StaticResource BorderStrokeLight}"
                                 StrokeShape="RoundRectangle 10"
                                 Padding="8,6">
 
@@ -101,11 +101,11 @@
                     <!-- Suresh -->
                     <Grid ColumnDefinitions="*,60">
                         <Label Text="Suresh Kumar"
-                               TextColor="#EA580C"/>
+                               TextColor="{StaticResource AvatarOrange}"/>
 
                         <Border Grid.Column="1"
-                                Background="#F3F4F6"
-                                Stroke="#E5E7EB"
+                                Background="{StaticResource PageBackground}"
+                                Stroke="{StaticResource BorderStrokeLight}"
                                 StrokeShape="RoundRectangle 10"
                                 Padding="8,6">
 
@@ -119,11 +119,11 @@
                     <!-- Kiran -->
                     <Grid ColumnDefinitions="*,60">
                         <Label Text="Kiran Kumar"
-                               TextColor="#16A34A"/>
+                               TextColor="{StaticResource AccentGreen}"/>
 
                         <Border Grid.Column="1"
-                                Background="#F3F4F6"
-                                Stroke="#E5E7EB"
+                                Background="{StaticResource PageBackground}"
+                                Stroke="{StaticResource BorderStrokeLight}"
                                 StrokeShape="RoundRectangle 10"
                                 Padding="8,6">
 
@@ -140,8 +140,8 @@
 
             <!-- GRAND TOTAL -->
             <Border Margin="20,0"
-                Background="#FFF8E6"
-                Stroke="#FCD34D"
+                Background="{StaticResource GoldBackgroundAlt}"
+                Stroke="{StaticResource WarningBorder}"
                 StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="12">
@@ -149,47 +149,47 @@
                     <Label Text="GRAND TOTAL"
                FontSize="13"
                FontAttributes="Bold"
-               TextColor="#A16207"/>
+               TextColor="{StaticResource WarningText}"/>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="👑 Bhanu Prakash"
                    FontAttributes="Bold"
-                   TextColor="#0F7A3D"/>
+                   TextColor="{StaticResource PrimaryGreen}"/>
                         <Label Grid.Column="1"
                    Text="25"
                    FontSize="18"
                    FontAttributes="Bold"
-                   TextColor="#0F7A3D"/>
+                   TextColor="{StaticResource PrimaryGreen}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Ramesh Kumar"
-                   TextColor="#2563EB"/>
+                   TextColor="{StaticResource AvatarBlue}"/>
                         <Label Grid.Column="1"
                    Text="10"
                    FontSize="18"
                    FontAttributes="Bold"
-                   TextColor="#2563EB"/>
+                   TextColor="{StaticResource AvatarBlue}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Suresh Kumar"
-                   TextColor="#EA580C"/>
+                   TextColor="{StaticResource AvatarOrange}"/>
                         <Label Grid.Column="1"
                    Text="40"
                    FontSize="18"
                    FontAttributes="Bold"
-                   TextColor="#EA580C"/>
+                   TextColor="{StaticResource AvatarOrange}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Kiran Kumar"
-                   TextColor="#16A34A"/>
+                   TextColor="{StaticResource AccentGreen}"/>
                         <Label Grid.Column="1"
                    Text="5"
                    FontSize="18"
                    FontAttributes="Bold"
-                   TextColor="#16A34A"/>
+                   TextColor="{StaticResource AccentGreen}"/>
                     </Grid>
 
                 </VerticalStackLayout>
@@ -198,8 +198,8 @@
 
             <!-- GAME PROGRESS -->
             <Border Margin="20,0"
-                Background="#ECFDF5"
-                Stroke="#BBF7D0"
+                Background="{StaticResource SuccessBackground}"
+                Stroke="{StaticResource SuccessBorderLight}"
                 StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="10">
@@ -207,14 +207,14 @@
                     <Label Text="GAME PROGRESS"
                        FontSize="13"
                        FontAttributes="Bold"
-                       TextColor="#166534"/>
+                       TextColor="{StaticResource PrimaryGreenDark}"/>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Target Score"/>
                         <Label Grid.Column="1"
                    Text="101"
                    FontAttributes="Bold"
-                   TextColor="#166534"/>
+                   TextColor="{StaticResource PrimaryGreenDark}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
@@ -222,7 +222,7 @@
                         <Label Grid.Column="1"
                    Text="40 Points"
                    FontAttributes="Bold"
-                   TextColor="#166534"/>
+                   TextColor="{StaticResource PrimaryGreenDark}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
@@ -230,7 +230,7 @@
                         <Label Grid.Column="1"
                    Text="1"
                    FontAttributes="Bold"
-                   TextColor="#166534"/>
+                   TextColor="{StaticResource PrimaryGreenDark}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
@@ -238,7 +238,7 @@
                         <Label Grid.Column="1"
                    Text="4"
                    FontAttributes="Bold"
-                   TextColor="#166534"/>
+                   TextColor="{StaticResource PrimaryGreenDark}"/>
                     </Grid>
 
                 </VerticalStackLayout>
@@ -247,8 +247,8 @@
 
             <!-- ELIMINATION WATCH -->
             <Border Margin="20,0"
-                Background="#FEF2F2"
-                Stroke="#FECACA"
+                Background="{StaticResource DangerBackground}"
+                Stroke="{StaticResource DangerLight}"
                 StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="10">
@@ -256,20 +256,20 @@
                     <Label Text="ELIMINATION WATCH"
                FontSize="13"
                FontAttributes="Bold"
-               TextColor="#B91C1C"/>
+               TextColor="{StaticResource DangerText}"/>
 
                     <Label Text="Suresh Kumar is closest to elimination."
                FontSize="13"
-               TextColor="#B91C1C"/>
+               TextColor="{StaticResource DangerText}"/>
 
                     <!-- Progress -->
                     <Grid HeightRequest="10">
 
-                        <Border Background="#FECACA"
+                        <Border Background="{StaticResource DangerLight}"
                     StrokeThickness="0"
                     StrokeShape="RoundRectangle 5"/>
 
-                        <Border Background="#EF4444"
+                        <Border Background="{StaticResource DangerAccent}"
                     WidthRequest="120"
                     StrokeThickness="0"
                     HorizontalOptions="Start"
@@ -279,7 +279,7 @@
 
                     <Label Text="40 / 101 Points"
                FontAttributes="Bold"
-               TextColor="#B91C1C"/>
+               TextColor="{StaticResource DangerText}"/>
 
                 </VerticalStackLayout>
 
@@ -287,7 +287,7 @@
 
             <!-- ADD ROUND BUTTON -->
             <Border Margin="20,0"
-                Background="#0F7A3D"
+                Background="{StaticResource PrimaryGreen}"
                 StrokeThickness="0"
                 StrokeShape="RoundRectangle 18">
                 
@@ -302,71 +302,71 @@
                         VerticalOptions="Center"
                         FontSize="17"
                         FontAttributes="Bold"
-                        TextColor="White"/>
+                        TextColor="{StaticResource White}"/>
 
                 </Grid>
 
             </Border>
 
             <!-- ROUND HISTORY -->
-            <Border    Margin="20,0" Background="White" Stroke="#E5E7EB" StrokeShape="RoundRectangle 18">
+            <Border    Margin="20,0" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
                 <VerticalStackLayout Padding="18" Spacing="12">
-                    <Label Text="ROUND HISTORY" FontSize="13" FontAttributes="Bold" TextColor="#6B7280"/>
+                    <Label Text="ROUND HISTORY" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource SecondaryText}"/>
                     <!-- Round 1 -->
-                    <Border Background="#F5F7FA" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                    <Border Background="{StaticResource PageBackgroundAlt}" StrokeThickness="0" StrokeShape="RoundRectangle 12">
                         <VerticalStackLayout Padding="14" Spacing="2">
-                            <Label Text="Round 1" FontAttributes="Bold" TextColor="#0F7A3D"/>
-                            <Label Text="BP 25 • RK 10 • SK 40 • KK 5" FontSize="12" TextColor="#6B7280"/>
+                            <Label Text="Round 1" FontAttributes="Bold" TextColor="{StaticResource PrimaryGreen}"/>
+                            <Label Text="BP 25 • RK 10 • SK 40 • KK 5" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
                         </VerticalStackLayout>
                     </Border>
                     <!-- Round 2 -->
-                    <Border Background="#F5F7FA" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                    <Border Background="{StaticResource PageBackgroundAlt}" StrokeThickness="0" StrokeShape="RoundRectangle 12">
                         <VerticalStackLayout Padding="14" Spacing="2">
-                            <Label Text="Round 2" FontAttributes="Bold" TextColor="#2563EB"/>
-                            <Label Text="BP 5 • RK 15 • SK 0 • KK 10" FontSize="12" TextColor="#6B7280"/>
+                            <Label Text="Round 2" FontAttributes="Bold" TextColor="{StaticResource AvatarBlue}"/>
+                            <Label Text="BP 5 • RK 15 • SK 0 • KK 10" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
                         </VerticalStackLayout>
                     </Border>
                     <!-- Round 3 -->
-                    <Border Background="#F5F7FA" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                    <Border Background="{StaticResource PageBackgroundAlt}" StrokeThickness="0" StrokeShape="RoundRectangle 12">
                         <VerticalStackLayout Padding="14" Spacing="2">
-                            <Label Text="Round 3" FontAttributes="Bold" TextColor="#EA580C"/>
-                            <Label Text="BP 20 • RK 30 • SK 10 • KK 5" FontSize="12" TextColor="#6B7280"/>
+                            <Label Text="Round 3" FontAttributes="Bold" TextColor="{StaticResource AvatarOrange}"/>
+                            <Label Text="BP 20 • RK 30 • SK 10 • KK 5" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
                         </VerticalStackLayout>
                     </Border>
                 </VerticalStackLayout>
             </Border>
 
             <!-- GAME STATUS -->
-            <Border Margin="20,0" Background="#ECFDF5" Stroke="#BBF7D0" StrokeShape="RoundRectangle 18">
+            <Border Margin="20,0" Background="{StaticResource SuccessBackground}" Stroke="{StaticResource SuccessBorderLight}" StrokeShape="RoundRectangle 18">
                 <VerticalStackLayout Padding="18" Spacing="10">
-                    <Label Text="GAME STATUS" FontSize="13" FontAttributes="Bold" TextColor="#166534"/>
+                    <Label Text="GAME STATUS" FontSize="13" FontAttributes="Bold" TextColor="{StaticResource PrimaryGreenDark}"/>
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Active Players"/>
-                        <Label Grid.Column="1" Text="4" FontAttributes="Bold" TextColor="#166534"/>
+                        <Label Grid.Column="1" Text="4" FontAttributes="Bold" TextColor="{StaticResource PrimaryGreenDark}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Dealer Next Round"/>
-                        <Label Grid.Column="1" Text="Ramesh Kumar" FontAttributes="Bold" TextColor="#166534"/>
+                        <Label Grid.Column="1" Text="Ramesh Kumar" FontAttributes="Bold" TextColor="{StaticResource PrimaryGreenDark}"/>
                     </Grid>
 
                     <Grid ColumnDefinitions="*,Auto">
                         <Label Text="Upcoming Round"/>
-                        <Label Grid.Column="1" Text="2" FontAttributes="Bold" TextColor="#166534"/>
+                        <Label Grid.Column="1" Text="2" FontAttributes="Bold" TextColor="{StaticResource PrimaryGreenDark}"/>
                     </Grid>
                 </VerticalStackLayout>
 
             </Border>
 
             <!-- FINISH GAME -->
-            <Border    Margin="20,0"    Background="#F3F4F6"    Stroke="#E5E7EB"    StrokeShape="RoundRectangle 16">
+            <Border    Margin="20,0"    Background="{StaticResource PageBackground}"    Stroke="{StaticResource BorderStrokeLight}"    StrokeShape="RoundRectangle 16">
                 <Grid HeightRequest="54">
-                    <Label Text="🏁 FINISH GAME" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="#4B5563"/>
+                    <Label Text="🏁 FINISH GAME" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource MutedGray}"/>
                 </Grid>
             </Border>
 
             <!-- FOOTER -->
-            <Label Margin="0,8,0,24" Text="Version 1.0 • Offline" FontSize="11" HorizontalOptions="Center" TextColor="#9CA3AF"/>
+            <Label Margin="0,8,0,24" Text="Version 1.0 • Offline" FontSize="11" HorizontalOptions="Center" TextColor="{StaticResource Gray400}"/>
         
         </VerticalStackLayout>
     </ScrollView>

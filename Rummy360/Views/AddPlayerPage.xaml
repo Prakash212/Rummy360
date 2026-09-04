@@ -4,72 +4,72 @@
     x:Class="Rummy360.Views.AddPlayerPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    BackgroundColor="#F3F4F6">
+    BackgroundColor="{StaticResource PageBackground}">
 
     <Grid RowDefinitions="170,*">
         <!-- HEADER -->
-        <Border Background="#0F7A3D">
+        <Border Background="{StaticResource PrimaryGreen}">
             <VerticalStackLayout Padding="24,50,24,24" Spacing="6">
-                <Label FontSize="13" Text="Player Management" TextColor="#A7F3D0"/>
-                <Label FontAttributes="Bold" FontSize="30" Text="Add Player" TextColor="White"/>
+                <Label FontSize="13" Text="Player Management" TextColor="{StaticResource PrimaryGreenPale}"/>
+                <Label FontAttributes="Bold" FontSize="30" Text="Add Player" TextColor="{StaticResource White}"/>
             </VerticalStackLayout>
         </Border>
         <!-- BODY -->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Padding="20" Spacing="22">
                 <!-- PLAYER NAME -->
-                <Border Background="White" Stroke="#D1D5DB" StrokeShape="RoundRectangle 18" Padding="18">
+                <Border Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderGray}" StrokeShape="RoundRectangle 18" Padding="18">
                     <VerticalStackLayout Spacing="14">
-                        <Label FontSize="13" FontAttributes="Bold" Text="PLAYER NAME" TextColor="#6B7280"/>
-                        <Border Stroke="#D1D5DB" StrokeShape="RoundRectangle 12" Padding="14">
-                            <Entry Placeholder="Enter player name" FontSize="18" TextColor="#1F2937" PlaceholderColor="#9CA3AF" BackgroundColor="Transparent" ClearButtonVisibility="WhileEditing"/>
+                        <Label FontSize="13" FontAttributes="Bold" Text="PLAYER NAME" TextColor="{StaticResource SecondaryText}"/>
+                        <Border Stroke="{StaticResource BorderGray}" StrokeShape="RoundRectangle 12" Padding="14">
+                            <Entry Placeholder="Enter player name" FontSize="18" TextColor="{StaticResource PrimaryText}" PlaceholderColor="{StaticResource PlaceholderText}" BackgroundColor="Transparent" ClearButtonVisibility="WhileEditing"/>
                         </Border>
                     </VerticalStackLayout>
                 </Border>
                 <!-- AVATAR COLOR -->
-                <Border Background="White" Stroke="#D1D5DB" StrokeShape="RoundRectangle 18" Padding="18">
+                <Border Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderGray}" StrokeShape="RoundRectangle 18" Padding="18">
                     <VerticalStackLayout Spacing="16">
-                        <Label FontSize="13" FontAttributes="Bold" Text="CHOOSE AVATAR COLOR" TextColor="#6B7280"/>
+                        <Label FontSize="13" FontAttributes="Bold" Text="CHOOSE AVATAR COLOR" TextColor="{StaticResource SecondaryText}"/>
                         <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto" ColumnSpacing="18" RowSpacing="18">
-                            <Border WidthRequest="46" HeightRequest="46" Background="#0F7A3D" StrokeShape="RoundRectangle 23"/>
-                            <Border Grid.Column="1" WidthRequest="46" HeightRequest="46" Background="#2563EB" StrokeShape="RoundRectangle 23"/>
-                            <Border Grid.Column="2" WidthRequest="46" HeightRequest="46" Background="#EA580C" StrokeShape="RoundRectangle 23"/>
-                            <Border Grid.Column="3" WidthRequest="46" HeightRequest="46" Background="#9333EA" StrokeShape="RoundRectangle 23"/>
-                            <Border Grid.Row="1" WidthRequest="46" HeightRequest="46" Background="#0D9488" StrokeShape="RoundRectangle 23"/>
-                            <Border Grid.Row="1" Grid.Column="1" WidthRequest="46" HeightRequest="46" Background="#DB2777" StrokeShape="RoundRectangle 23"/>
-                            <Border Grid.Row="1" Grid.Column="2" WidthRequest="46" HeightRequest="46" Background="#D97706" StrokeShape="RoundRectangle 23"/>
-                            <Border Grid.Row="1" Grid.Column="3" WidthRequest="46" HeightRequest="46" Background="#64748B" StrokeShape="RoundRectangle 23"/>
+                            <Border WidthRequest="46" HeightRequest="46" Background="{StaticResource PrimaryGreen}" StrokeShape="RoundRectangle 23"/>
+                            <Border Grid.Column="1" WidthRequest="46" HeightRequest="46" Background="{StaticResource AvatarBlue}" StrokeShape="RoundRectangle 23"/>
+                            <Border Grid.Column="2" WidthRequest="46" HeightRequest="46" Background="{StaticResource AvatarOrange}" StrokeShape="RoundRectangle 23"/>
+                            <Border Grid.Column="3" WidthRequest="46" HeightRequest="46" Background="{StaticResource AvatarPurple}" StrokeShape="RoundRectangle 23"/>
+                            <Border Grid.Row="1" WidthRequest="46" HeightRequest="46" Background="{StaticResource AvatarTeal}" StrokeShape="RoundRectangle 23"/>
+                            <Border Grid.Row="1" Grid.Column="1" WidthRequest="46" HeightRequest="46" Background="{StaticResource AvatarPink}" StrokeShape="RoundRectangle 23"/>
+                            <Border Grid.Row="1" Grid.Column="2" WidthRequest="46" HeightRequest="46" Background="{StaticResource AvatarAmber}" StrokeShape="RoundRectangle 23"/>
+                            <Border Grid.Row="1" Grid.Column="3" WidthRequest="46" HeightRequest="46" Background="{StaticResource AvatarGray}" StrokeShape="RoundRectangle 23"/>
                         </Grid>
                     </VerticalStackLayout>
                 </Border>
                 <!-- LIVE PREVIEW -->
-                <Border Background="#ECFDF5" Stroke="#A7F3D0" StrokeShape="RoundRectangle 18" Padding="18">
+                <Border Background="{StaticResource SuccessBackground}" Stroke="{StaticResource PrimaryGreenPale}" StrokeShape="RoundRectangle 18" Padding="18">
                     <VerticalStackLayout Spacing="14">
-                        <Label FontSize="13" FontAttributes="Bold" Text="LIVE PREVIEW" TextColor="#166534"/>
+                        <Label FontSize="13" FontAttributes="Bold" Text="LIVE PREVIEW" TextColor="{StaticResource PrimaryGreenDark}"/>
                         <HorizontalStackLayout Spacing="14">
-                            <Border WidthRequest="48" HeightRequest="48" Background="#0F7A3D" Stroke="White" StrokeThickness="3" StrokeShape="RoundRectangle 24">
+                            <Border WidthRequest="48" HeightRequest="48" Background="{StaticResource PrimaryGreen}" Stroke="{StaticResource WhiteBrush}" StrokeThickness="3" StrokeShape="RoundRectangle 24">
                                 <Border.Shadow>
-                                    <Shadow Brush="#22000000" Opacity="0.35" Radius="8" Offset="0,3"/>
+                                    <Shadow Brush="{StaticResource ShadowOverlay20}" Opacity="0.35" Radius="8" Offset="0,3"/>
                                 </Border.Shadow>
-                                <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="18" FontAttributes="Bold" Text="BP" TextColor="White"/>
+                                <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="18" FontAttributes="Bold" Text="BP" TextColor="{StaticResource White}"/>
                             </Border>
                             <VerticalStackLayout VerticalOptions="Center" Spacing="0">
-                                <Label FontAttributes="Bold" FontSize="18" Text="Bhanu Prakash" TextColor="#166534"/>
-                                <Label FontSize="14" Text="Games Played : 0" TextColor="#166534"/>
+                                <Label FontAttributes="Bold" FontSize="18" Text="Bhanu Prakash" TextColor="{StaticResource PrimaryGreenDark}"/>
+                                <Label FontSize="14" Text="Games Played : 0" TextColor="{StaticResource PrimaryGreenDark}"/>
                             </VerticalStackLayout>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Border>
                 <!-- SAVE BUTTON -->
-                <Border Background="#0F7A3D" StrokeShape="RoundRectangle 16">
+                <Border Background="{StaticResource PrimaryGreen}" StrokeShape="RoundRectangle 16">
                     <Grid Padding="16">
-                        <Label HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" Text="+ SAVE PLAYER" TextColor="White"/>
+                        <Label HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" Text="+ SAVE PLAYER" TextColor="{StaticResource White}"/>
                     </Grid>
                 </Border>
                 <!-- CANCEL -->
-                <Border Background="White" Stroke="#D1D5DB" StrokeShape="RoundRectangle 16">
+                <Border Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderGray}" StrokeShape="RoundRectangle 16">
                     <Grid Padding="16">
-                        <Label HorizontalOptions="Center" FontAttributes="Bold" FontSize="18" Text="CANCEL" TextColor="#6B7280"/>
+                        <Label HorizontalOptions="Center" FontAttributes="Bold" FontSize="18" Text="CANCEL" TextColor="{StaticResource SecondaryText}"/>
                     </Grid>
                 </Border>
             </VerticalStackLayout>

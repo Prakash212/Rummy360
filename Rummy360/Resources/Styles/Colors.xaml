@@ -23,6 +23,7 @@
     <Color x:Key="Gray300">#ACACAC</Color>
     <Color x:Key="Gray400">#919191</Color>
     <Color x:Key="Gray500">#6E6E6E</Color>
+    <Color x:Key="Gray700">#374151</Color>
     <Color x:Key="Gray600">#404040</Color>
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
@@ -41,4 +42,102 @@
     <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+
+    <!-- ======================================= -->
+    <!-- Rummy360 Theme Colors -->
+    <!-- ======================================= -->
+
+    <Color x:Key="PrimaryGreen">#0F7A3D</Color>
+    <Color x:Key="PrimaryGreenDark">#166534</Color>
+    <Color x:Key="PrimaryGreenLight">#ECFDF5</Color>
+
+    <!-- Additional colors discovered in XAML (mapped from hardcoded values) -->
+    <Color x:Key="PageBackgroundAlt">#F5F7FA</Color>
+    <Color x:Key="PrimaryGreenSoftText">#CFE8DA</Color>
+    <Color x:Key="WinnerBackground">#FFF7ED</Color>
+    <Color x:Key="GoldAccent">#FBBF24</Color>
+    <Color x:Key="ChampionText">#B45309</Color>
+    <Color x:Key="ChampionSubText">#92400E</Color>
+    <Color x:Key="SuccessBorderLight">#BBF7D0</Color>
+    <Color x:Key="BorderStrokeLight">#E5E7EB</Color>
+    <Color x:Key="AccentGreen">#16A34A</Color>
+    <Color x:Key="MutedGray">#4B5563</Color>
+    <Color x:Key="InfoBackgroundLight">#EFF6FF</Color>
+    <Color x:Key="InfoBorderLight">#BFDBFE</Color>
+    <Color x:Key="PrimaryGreenTint">#C7E9D5</Color>
+    <Color x:Key="PrimaryGreenPale">#A7F3D0</Color>
+    <Color x:Key="DangerAccent">#EF4444</Color>
+    <Color x:Key="DangerLight">#FECACA</Color>
+    <Color x:Key="GoldBackgroundAlt">#FFF8E6</Color>
+    <Color x:Key="ShadowOverlay20">#22000000</Color>
+    <Color x:Key="GoldDark">#D4AF37</Color>
+    <Color x:Key="GoldPale">#F6E7A1</Color>
+    <Color x:Key="GoldMuted">#E8E1B5</Color>
+    <Color x:Key="ProgressBackground">#215C46</Color>
+    <Color x:Key="PlaceholderText">#9CA3AF</Color>
+
+    <Color x:Key="Gold">#D4A72C</Color>
+    <Color x:Key="GoldLight">#FEFCE8</Color>
+
+    <Color x:Key="PageBackground">#F3F4F6</Color>
+    <Color x:Key="CardBackground">#FFFFFF</Color>
+
+    <Color x:Key="SuccessBackground">#ECFDF5</Color>
+    <Color x:Key="WarningBackground">#FEFCE8</Color>
+    <Color x:Key="DangerBackground">#FEF2F2</Color>
+
+    <Color x:Key="PrimaryText">#1F2937</Color>
+    <Color x:Key="SecondaryText">#6B7280</Color>
+
+    <Color x:Key="SuccessText">#166534</Color>
+    <Color x:Key="WarningText">#A16207</Color>
+    <Color x:Key="DangerText">#B91C1C</Color>
+
+    <Color x:Key="WhiteText">#FFFFFF</Color>
+
+    <Color x:Key="BorderGray">#D1D5DB</Color>
+
+    <Color x:Key="SuccessBorder">#86EFAC</Color>
+    <Color x:Key="WarningBorder">#FCD34D</Color>
+    <Color x:Key="DangerBorder">#FCA5A5</Color>
+
+    <!-- Player Avatar Colors -->
+    <Color x:Key="AvatarGreen">#0F7A3D</Color>
+    <Color x:Key="AvatarBlue">#2563EB</Color>
+    <Color x:Key="AvatarOrange">#EA580C</Color>
+    <Color x:Key="AvatarPurple">#9333EA</Color>
+
+    <Color x:Key="AvatarTeal">#0D9488</Color>
+    <Color x:Key="AvatarPurplePale">#FAF5FF</Color>
+    <Color x:Key="AvatarPink">#DB2777</Color>
+    <Color x:Key="AvatarAmber">#D97706</Color>
+    <Color x:Key="AvatarGray">#64748B</Color>
+
+    <!-- Optional brushes -->
+    <SolidColorBrush x:Key="PrimaryGreenBrush" Color="{StaticResource PrimaryGreen}" />
+    <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource CardBackground}" />
+    <SolidColorBrush x:Key="SuccessBackgroundBrush" Color="{StaticResource SuccessBackground}" />
+    <SolidColorBrush x:Key="PageBackgroundAltBrush" Color="{StaticResource PageBackgroundAlt}" />
+    <SolidColorBrush x:Key="AvatarPurplePaleBrush" Color="{StaticResource AvatarPurplePale}" />
+    <SolidColorBrush x:Key="PrimaryGreenSoftTextBrush" Color="{StaticResource PrimaryGreenSoftText}" />
+    <SolidColorBrush x:Key="WinnerBackgroundBrush" Color="{StaticResource WinnerBackground}" />
+    <SolidColorBrush x:Key="GoldAccentBrush" Color="{StaticResource GoldAccent}" />
+    <SolidColorBrush x:Key="ChampionTextBrush" Color="{StaticResource ChampionText}" />
+    <SolidColorBrush x:Key="ChampionSubTextBrush" Color="{StaticResource ChampionSubText}" />
+    <SolidColorBrush x:Key="SuccessBorderLightBrush" Color="{StaticResource SuccessBorderLight}" />
+    <SolidColorBrush x:Key="BorderStrokeLightBrush" Color="{StaticResource BorderStrokeLight}" />
+    <SolidColorBrush x:Key="AccentGreenBrush" Color="{StaticResource AccentGreen}" />
+    <SolidColorBrush x:Key="MutedGrayBrush" Color="{StaticResource MutedGray}" />
+    <SolidColorBrush x:Key="InfoBackgroundLightBrush" Color="{StaticResource InfoBackgroundLight}" />
+    <SolidColorBrush x:Key="InfoBorderLightBrush" Color="{StaticResource InfoBorderLight}" />
+    <SolidColorBrush x:Key="DangerAccentBrush" Color="{StaticResource DangerAccent}" />
+    <SolidColorBrush x:Key="DangerLightBrush" Color="{StaticResource DangerLight}" />
+    <SolidColorBrush x:Key="GoldBackgroundAltBrush" Color="{StaticResource GoldBackgroundAlt}" />
+    <SolidColorBrush x:Key="ShadowOverlay20Brush" Color="{StaticResource ShadowOverlay20}" />
+    <SolidColorBrush x:Key="GoldDarkBrush" Color="{StaticResource GoldDark}" />
+    <SolidColorBrush x:Key="GoldPaleBrush" Color="{StaticResource GoldPale}" />
+    <SolidColorBrush x:Key="GoldMutedBrush" Color="{StaticResource GoldMuted}" />
+    <SolidColorBrush x:Key="ProgressBackgroundBrush" Color="{StaticResource ProgressBackground}" />
+    <SolidColorBrush x:Key="PlaceholderTextBrush" Color="{StaticResource PlaceholderText}" />
+    
 </ResourceDictionary>

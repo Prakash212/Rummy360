@@ -3,26 +3,26 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Shell.NavBarIsVisible="False"
-    BackgroundColor="#F5F7FA">
+    BackgroundColor="{StaticResource PageBackgroundAlt}">
 
     <ScrollView>
 
         <VerticalStackLayout Spacing="20">
 
             <!-- Header -->
-            <Border Background="#0F7A3D"
+            <Border Background="{StaticResource PrimaryGreen}"
                     StrokeThickness="0">
 
                 <VerticalStackLayout Padding="24,36,24,24">
 
                     <Label Text="Create New Game"
                            FontSize="13"
-                           TextColor="#CFE8DA"/>
+                           TextColor="{StaticResource PrimaryGreenSoftText}"/>
 
                     <Label Text="Game Setup"
                            FontSize="28"
                            FontAttributes="Bold"
-                           TextColor="White"/>
+                           TextColor="{StaticResource White}"/>
 
                 </VerticalStackLayout>
 
@@ -30,42 +30,42 @@
 
             <!-- Game Type -->
             <Border Margin="20,0"
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="14">
 
                     <Label Text="GAME TYPE"
                            FontSize="12"
-                           TextColor="#6B7280"/>
+                           TextColor="{StaticResource SecondaryText}"/>
 
                     <Grid ColumnDefinitions="*,*"
                           ColumnSpacing="12">
 
-                        <Border Background="#0F7A3D"
+                        <Border Background="{StaticResource PrimaryGreen}"
                                 StrokeThickness="0"
                                 StrokeShape="RoundRectangle 12"
                                 Padding="0,12">
 
-                            <Label Text="101"
+                                    <Label Text="101"
                                    HorizontalOptions="Center"
                                    FontAttributes="Bold"
                                    FontSize="16"
-                                   TextColor="White"/>
+                                   TextColor="{StaticResource White}"/>
 
                         </Border>
 
                         <Border Grid.Column="1"
-                                Background="#F5F7FA"
-                                Stroke="#D1D5DB"
+                                Background="{StaticResource PageBackgroundAlt}"
+                                Stroke="{StaticResource BorderGray}"
                                 StrokeShape="RoundRectangle 12"
                                 Padding="0,12">
 
                             <Label Text="201"
                                    HorizontalOptions="Center"
                                    FontSize="16"
-                                   TextColor="#374151"/>
+                                   TextColor="{StaticResource Gray700}"/>
 
                         </Border>
 
@@ -77,26 +77,26 @@
 
             <!-- Drop Points -->
             <Border Margin="20,0"
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="12">
 
                     <Label Text="DROP AMOUNT"
                            FontSize="12"
-                           TextColor="#6B7280"/>
+                           TextColor="{StaticResource SecondaryText}"/>
 
                     <Slider Minimum="0"
                             Maximum="80"
                             Value="40"
-                            MinimumTrackColor="#D4AF37"
-                            MaximumTrackColor="#E5E7EB"/>
+                            MinimumTrackColor="{StaticResource GoldDark}"
+                            MaximumTrackColor="{StaticResource BorderStrokeLight}"/>
 
                     <Label Text="40 Points"
                            FontSize="18"
                            FontAttributes="Bold"
-                           TextColor="#0F7A3D"/>
+                           TextColor="{StaticResource PrimaryGreen}"/>
 
                 </VerticalStackLayout>
 
@@ -104,20 +104,20 @@
 
             <!-- Dealer -->
             <Border Margin="20,0"
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="8">
 
                     <Label Text="DEALER"
                            FontSize="12"
-                           TextColor="#6B7280"/>
+                           TextColor="{StaticResource SecondaryText}"/>
 
                     <Label Text="Bhanu Prakash ▼"
                            FontSize="16"
                            FontAttributes="Bold"
-                           TextColor="#0F7A3D"/>
+                           TextColor="{StaticResource PrimaryGreen}"/>
 
                 </VerticalStackLayout>
 
@@ -125,20 +125,20 @@
 
             <!-- Players -->
             <Border Margin="20,0"
-                    Background="White"
-                    Stroke="#E5E7EB"
+                    Background="{StaticResource CardBackground}"
+                    Stroke="{StaticResource BorderStrokeLight}"
                     StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="8">
 
                     <Label Text="PLAYERS"
                            FontSize="12"
-                           TextColor="#6B7280"/>
+                           TextColor="{StaticResource SecondaryText}"/>
 
                     <Label Text="4 Selected Players"
                            FontSize="16"
                            FontAttributes="Bold"
-                           TextColor="#1F2937"/>
+                           TextColor="{StaticResource PrimaryText}"/>
 
                 </VerticalStackLayout>
 
@@ -146,7 +146,7 @@
 
             <!-- Start Button -->
             <Border Margin="20,0"
-                    Background="#0F7A3D"
+                    Background="{StaticResource PrimaryGreen}"
                     StrokeThickness="0"
                     StrokeShape="RoundRectangle 16">
                 <Border.GestureRecognizers>
@@ -160,7 +160,7 @@
                            VerticalOptions="Center"
                            FontAttributes="Bold"
                            FontSize="17"
-                           TextColor="White"/>
+                           TextColor="{StaticResource White}"/>
 
                 </Grid>
 
@@ -168,8 +168,8 @@
 
             <!-- Rules -->
             <Border Margin="20,0,20,24"
-                    Background="#ECFDF5"
-                    Stroke="#BBF7D0"
+                    Background="{StaticResource SuccessBackground}"
+                    Stroke="{StaticResource SuccessBorderLight}"
                     StrokeShape="RoundRectangle 18">
 
                 <VerticalStackLayout Padding="18" Spacing="6">
@@ -177,19 +177,19 @@
                     <Label Text="Game Rules"
                            FontAttributes="Bold"
                            FontSize="15"
-                           TextColor="#166534"/>
+                           TextColor="{StaticResource PrimaryGreenDark}"/>
 
                     <Label Text="• First player reaching the limit is eliminated."
                            FontSize="12"
-                           TextColor="#166534"/>
+                           TextColor="{StaticResource PrimaryGreenDark}"/>
 
                     <Label Text="• Last remaining player wins the game."
                            FontSize="12"
-                           TextColor="#166534"/>
+                           TextColor="{StaticResource PrimaryGreenDark}"/>
 
                     <Label Text="• Dealer rotates every round."
                            FontSize="12"
-                           TextColor="#166534"/>
+                           TextColor="{StaticResource PrimaryGreenDark}"/>
 
                 </VerticalStackLayout>
 
