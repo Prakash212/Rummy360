@@ -1,0 +1,89 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 340 110"
+     width="340"
+     height="110">
+
+  <defs>
+
+    <!-- Gold gradient for 360 -->
+    <linearGradient id="gold360" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF4B5"/>
+      <stop offset="25%" stop-color="#F8D66D"/>
+      <stop offset="55%" stop-color="#D4A72C"/>
+      <stop offset="80%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#8C5C05"/>
+    </linearGradient>
+
+    <!-- Gold underline -->
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8C5C05"/>
+      <stop offset="20%" stop-color="#D4A72C"/>
+      <stop offset="50%" stop-color="#FFF1A8"/>
+      <stop offset="80%" stop-color="#D4A72C"/>
+      <stop offset="100%" stop-color="#8C5C05"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- RUMMY -->
+  <text x="130"
+        y="44"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="34"
+        font-weight="700"
+        letter-spacing="2"
+        fill="#FFFFFF">
+    RUMMY
+  </text>
+
+  <!-- 360 -->
+  <text x="265"
+        y="44"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="34"
+        font-weight="700"
+        fill="url(#gold360)"
+        filter="url(#glow)">
+    360
+  </text>
+
+  <!-- Subtitle -->
+  <text x="170"
+        y="70"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="10"
+        font-weight="600"
+        letter-spacing="3"
+        fill="#CFE8DA">
+    OFFLINE SCORE TRACKER
+  </text>
+
+  <!-- Gold Accent Line -->
+  <rect x="95"
+        y="84"
+        width="150"
+        height="5"
+        rx="2.5"
+        fill="url(#goldLine)"/>
+
+  <!-- Center Glow -->
+  <ellipse cx="170"
+           cy="86"
+           rx="38"
+           ry="2.5"
+           fill="#FFF7C2"
+           opacity="0.45"/>
+
+</svg>

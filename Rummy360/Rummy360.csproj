@@ -66,11 +66,89 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Platforms\Android\Resources\values\styles.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\Icons\backup.svg" />
+	  <None Remove="Resources\Images\Icons\cards.svg" />
+	  <None Remove="Resources\Images\Icons\chart.svg" />
+	  <None Remove="Resources\Images\Icons\dealer.svg" />
+	  <None Remove="Resources\Images\Icons\delete.svg" />
+	  <None Remove="Resources\Images\Icons\edit.svg" />
+	  <None Remove="Resources\Images\Icons\history.svg" />
+	  <None Remove="Resources\Images\Icons\people.svg" />
+	  <None Remove="Resources\Images\Icons\plus.svg" />
+	  <None Remove="Resources\Images\Icons\restore.svg" />
+	  <None Remove="Resources\Images\Icons\settings.svg" />
+	  <None Remove="Resources\Images\Icons\success.svg" />
+	  <None Remove="Resources\Images\Icons\trophy.svg" />
+	  <None Remove="Resources\Images\Icons\warning.svg" />
+	  <None Remove="Resources\Splash\crown.svg" />
+	  <None Remove="Resources\Splash\logo_ring.svg" />
+	  <None Remove="Resources\Splash\logo_text.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Icons\backup.svg" />
+	  <MauiImage Include="Resources\Images\Icons\cards.svg" />
+	  <MauiImage Include="Resources\Images\Icons\chart.svg" />
+	  <MauiImage Include="Resources\Images\Icons\icon_crown.svg" />
+	  <MauiImage Include="Resources\Images\Icons\dealer.svg" />
+	  <MauiImage Include="Resources\Images\Icons\delete.svg" />
+	  <MauiImage Include="Resources\Images\Icons\edit.svg" />
+	  <MauiImage Include="Resources\Images\Icons\history.svg" />
+	  <MauiImage Include="Resources\Images\Icons\people.svg" />
+	  <MauiImage Include="Resources\Images\Icons\plus.svg" />
+	  <MauiImage Include="Resources\Images\Icons\restore.svg" />
+	  <MauiImage Include="Resources\Images\Icons\settings.svg" />
+	  <MauiImage Include="Resources\Images\Icons\success.svg" />
+	  <MauiImage Include="Resources\Images\Icons\trophy.svg" />
+	  <MauiImage Include="Resources\Images\Icons\warning.svg" />
+	  <MauiImage Include="Resources\Splash\card_club.svg" />
+	  <MauiImage Include="Resources\Splash\card_diamond.svg" />
+	  <MauiImage Include="Resources\Splash\card_heart.svg" />
+	  <MauiImage Include="Resources\Splash\club.svg" />
+	  <MauiImage Include="Resources\Splash\diamond.svg" />
+	  <MauiImage Include="Resources\Splash\card_spade.svg" />
+	  <MauiImage Include="Resources\Splash\spade.svg" />
+	  <MauiImage Include="Resources\Splash\heart.svg" />
+	  <MauiImage Include="Resources\Splash\card_base.svg" />
+	  <MauiImage Include="Resources\Splash\crown.svg" />
+	  <MauiImage Include="Resources\Splash\logo_ring.svg" />
+	  <MauiImage Include="Resources\Splash\logo_text.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Components\ActionIconView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\ButtonView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\CardView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\FloatingActionButtonView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\PageHeaderView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\PrimaryButtonView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\SecondaryButtonView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\SectionTitleView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\AddPlayerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

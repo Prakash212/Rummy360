@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    x:Class="Rummy360.Components.CardView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Rummy360.Components"
+    x:Name="Root">
+
+    <Border
+        x:Name="CardBorder"
+        Background="{StaticResource CardBackground}"
+        Stroke="{StaticResource BorderStrokeLight}"
+        StrokeShape="RoundRectangle 18"
+        Padding="18">
+
+        <Border.GestureRecognizers>
+            <TapGestureRecognizer Tapped="CardTapped"/>
+        </Border.GestureRecognizers>
+
+        <Border.Shadow>
+            <Shadow
+                Brush="{StaticResource ShadowOverlay20Brush}"
+                Opacity="0.10"
+                Radius="8"
+                Offset="0,2"/>
+        </Border.Shadow>
+
+        <VerticalStackLayout Spacing="12">
+
+            <!-- Icon -->
+            <components:ActionIconView
+                Icon="{Binding Source={x:Reference Root}, Path=Icon}"
+                IconBackground="{Binding Source={x:Reference Root}, Path=IconBackground}"
+                ContainerSize="52"
+                IconSize="24"/>
+
+            <!-- Title -->
+            <Label
+                Text="{Binding Source={x:Reference Root}, Path=Title}"
+                FontSize="16"
+                FontAttributes="Bold"
+                TextColor="{StaticResource PrimaryText}"/>
+
+            <!-- Subtitle -->
+            <Label
+                Text="{Binding Source={x:Reference Root}, Path=Subtitle}"
+                FontSize="12"
+                TextColor="{StaticResource SecondaryText}"/>
+
+        </VerticalStackLayout>
+
+    </Border>
+
+</ContentView>

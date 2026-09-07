@@ -4,16 +4,12 @@
     x:Class="Rummy360.Views.SettingsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Rummy360.Components"
     BackgroundColor="{StaticResource PageBackground}">
 
     <Grid RowDefinitions="170,*">
         <!-- HEADER -->
-        <Border Background="{StaticResource PrimaryGreen}">
-            <VerticalStackLayout Padding="24,50,24,24" Spacing="6">
-                <Label Text="Preferences" FontSize="13" TextColor="{StaticResource PrimaryGreenLight}"/>
-                <Label Text="Settings" FontSize="30" FontAttributes="Bold" TextColor="{StaticResource WhiteText}"/>
-            </VerticalStackLayout>
-        </Border>
+        <components:PageHeaderView Title="Settings" Subtitle="Preferences" />
         <!-- BODY -->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Padding="20" Spacing="18">
@@ -83,15 +79,8 @@
                     </VerticalStackLayout>
                 </Border>
                 <!-- DANGER -->
-                <Border Background="{StaticResource DangerBackground}" Stroke="{StaticResource DangerBorder}" StrokeShape="RoundRectangle 18" Padding="18">
-                    <VerticalStackLayout Spacing="8">
-                        <HorizontalStackLayout Spacing="10">
-                            <Label Text="🗑️" FontSize="24"/>
-                            <Label Text="Delete All Game Data" FontAttributes="Bold" TextColor="{StaticResource DangerText}" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
-                        <Label Text="This removes every saved game permanently." FontSize="13" TextColor="{StaticResource DangerText}"/>
-                    </VerticalStackLayout>
-                </Border>
+                <components:PrimaryButtonView Text="SAVE SETTINGS"/>
+                <components:SecondaryButtonView Text="RESET TO DEFAULTS"/>
                 <!-- FOOTER -->
                 <Label HorizontalOptions="Center" Margin="0,12,0,20" FontSize="12" Text="Rummy360 • Offline First • Version 1.0" TextColor="{StaticResource SecondaryText}"/>
             </VerticalStackLayout>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 170 235">
+
+  <defs>
+
+    <!-- Card Body -->
+    <linearGradient id="cardBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8F8F8"/>
+    </linearGradient>
+
+    <!-- Gold Border -->
+    <linearGradient id="goldBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="45%" stop-color="#E9C455"/>
+      <stop offset="100%" stop-color="#C38A13"/>
+    </linearGradient>
+
+    <!-- Card Gloss -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Premium Heart -->
+    <radialGradient id="heartFill" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FF8E8E"/>
+      <stop offset="35%" stop-color="#FF4D6D"/>
+      <stop offset="70%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#B3122D"/>
+    </radialGradient>
+
+    <!-- Heart Shine -->
+    <linearGradient id="heartShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Soft Shadow -->
+  <rect x="8" y="9"
+        width="154"
+        height="219"
+        rx="18"
+        fill="#000000"
+        opacity="0.05"/>
+
+  <!-- Main Card -->
+  <rect x="5" y="5"
+        width="160"
+        height="225"
+        rx="18"
+        fill="url(#cardBody)"
+        stroke="url(#goldBorder)"
+        stroke-width="2"/>
+
+  <!-- Inner Border -->
+  <rect x="13" y="13"
+        width="144"
+        height="209"
+        rx="14"
+        fill="none"
+        stroke="#EFE5BE"
+        stroke-width="1"/>
+
+  <!-- Top Gloss -->
+  <path d="M20 22
+           Q85 6 150 22
+           L150 92
+           Q85 74 20 92 Z"
+        fill="url(#gloss)"/>
+
+  <!-- Bottom Light -->
+  <path d="M20 188
+           Q85 205 150 188
+           L150 214
+           Q85 223 20 214 Z"
+        fill="#FFFFFF"
+        opacity="0.12"/>
+
+  <!-- Edge Highlights -->
+  <path d="M18 20 V205"
+        stroke="#FFFFFF"
+        stroke-width="1"
+        opacity="0.45"/>
+
+  <path d="M150 20 V205"
+        stroke="#D8D8D8"
+        stroke-width="1"
+        opacity="0.35"/>
+
+  <!-- ===== TOP LEFT VALUE ===== -->
+  <text x="20"
+        y="30"
+        font-family="Georgia"
+        font-size="21"
+        font-weight="700"
+        fill="#C1121F">2</text>
+
+  <!-- Small Heart -->
+  <g transform="translate(20,36) scale(0.15)">
+    <path fill="url(#heartFill)"
+          d="M64 116
+             C56 108 49 102 42 96
+             C25 82 14 68 14 50
+             C14 33 27 20 44 20
+             C53 20 60 24 64 32
+             C68 24 75 20 84 20
+             C101 20 114 33 114 50
+             C114 68 103 82 86 96
+             C79 102 72 108 64 116 Z"/>
+
+    <path fill="url(#heartShine)"
+          opacity="0.35"
+          d="M64 28
+             C72 24 80 23 87 26
+             C92 29 96 34 98 40
+             C90 37 82 36 74 39
+             C68 41 62 46 58 52
+             C54 44 46 39 38 37
+             C44 30 53 26 64 28 Z"/>
+  </g>
+
+  <!-- ===== LARGE CENTER HEART ===== -->
+  <g transform="translate(25,48) scale(0.78)">
+
+    <path fill="url(#heartFill)"
+          d="M64 116
+             C56 108 49 102 42 96
+             C25 82 14 68 14 50
+             C14 33 27 20 44 20
+             C53 20 60 24 64 32
+             C68 24 75 20 84 20
+             C101 20 114 33 114 50
+             C114 68 103 82 86 96
+             C79 102 72 108 64 116 Z"/>
+
+    <!-- Shine -->
+    <path fill="url(#heartShine)"
+          opacity="0.40"
+          d="M64 28
+             C72 24 80 23 87 26
+             C92 29 96 34 98 40
+             C90 37 82 36 74 39
+             C68 41 62 46 58 52
+             C54 44 46 39 38 37
+             C44 30 53 26 64 28 Z"/>
+
+  </g>
+
+  <!-- ===== BOTTOM RIGHT VALUE ===== -->
+  <g transform="translate(150,205) rotate(180)">
+
+    <text x="20"
+          y="30"
+          font-family="Georgia"
+          font-size="21"
+          font-weight="700"
+          fill="#C1121F">2</text>
+
+    <g transform="translate(20,36) scale(0.15)">
+      <path fill="url(#heartFill)"
+            d="M64 116
+               C56 108 49 102 42 96
+               C25 82 14 68 14 50
+               C14 33 27 20 44 20
+               C53 20 60 24 64 32
+               C68 24 75 20 84 20
+               C101 20 114 33 114 50
+               C114 68 103 82 86 96
+               C79 102 72 108 64 116 Z"/>
+
+      <path fill="url(#heartShine)"
+            opacity="0.35"
+            d="M64 28
+               C72 24 80 23 87 26
+               C92 29 96 34 98 40
+               C90 37 82 36 74 39
+               C68 41 62 46 58 52
+               C54 44 46 39 38 37
+               C44 30 53 26 64 28 Z"/>
+    </g>
+
+  </g>
+
+</svg>

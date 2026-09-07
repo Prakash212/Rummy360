@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="Maui.MainTheme" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:statusBarColor">#0F7A3D</item>
+    <item name="android:windowLightStatusBar">false</item>
+    <item name="android:navigationBarColor">#0F7A3D</item>
+  </style>
+
+</resources>

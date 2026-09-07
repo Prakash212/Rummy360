@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 170 235">
+
+  <defs>
+
+    <!-- Card Body -->
+    <linearGradient id="cardBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8F8F8"/>
+    </linearGradient>
+
+    <!-- Gold Border -->
+    <linearGradient id="goldBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="45%" stop-color="#E9C455"/>
+      <stop offset="100%" stop-color="#C38A13"/>
+    </linearGradient>
+
+    <!-- Card Gloss -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Premium Diamond -->
+    <radialGradient id="diamondFill" cx="38%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FF9A9A"/>
+      <stop offset="35%" stop-color="#FF5252"/>
+      <stop offset="70%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#A9112B"/>
+    </radialGradient>
+
+    <!-- Diamond Shine -->
+    <linearGradient id="diamondShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Soft Shadow -->
+  <rect x="8" y="9"
+        width="154"
+        height="219"
+        rx="18"
+        fill="#000000"
+        opacity="0.05"/>
+
+  <!-- Main Card -->
+  <rect x="5" y="5"
+        width="160"
+        height="225"
+        rx="18"
+        fill="url(#cardBody)"
+        stroke="url(#goldBorder)"
+        stroke-width="2"/>
+
+  <!-- Inner Border -->
+  <rect x="13" y="13"
+        width="144"
+        height="209"
+        rx="14"
+        fill="none"
+        stroke="#EFE5BE"
+        stroke-width="1"/>
+
+  <!-- Top Gloss -->
+  <path d="M20 22
+           Q85 6 150 22
+           L150 92
+           Q85 74 20 92 Z"
+        fill="url(#gloss)"/>
+
+  <!-- Bottom Light -->
+  <path d="M20 188
+           Q85 205 150 188
+           L150 214
+           Q85 223 20 214 Z"
+        fill="#FFFFFF"
+        opacity="0.12"/>
+
+  <!-- Edge Highlights -->
+  <path d="M18 20 V205"
+        stroke="#FFFFFF"
+        stroke-width="1"
+        opacity="0.45"/>
+
+  <path d="M150 20 V205"
+        stroke="#D8D8D8"
+        stroke-width="1"
+        opacity="0.35"/>
+
+  <!-- ===== TOP LEFT VALUE ===== -->
+  <text x="20"
+        y="30"
+        font-family="Georgia"
+        font-size="21"
+        font-weight="700"
+        fill="#C1121F">3</text>
+
+  <!-- Small Diamond -->
+  <g transform="translate(20,36) scale(0.15)">
+    <path fill="url(#diamondFill)"
+          d="M64 10
+             L108 64
+             L64 118
+             L20 64 Z"/>
+
+    <path fill="url(#diamondShine)"
+          opacity="0.40"
+          d="M64 18
+             L94 56
+             L64 46
+             L34 56 Z"/>
+  </g>
+
+  <!-- ===== LARGE CENTER DIAMOND ===== -->
+  <g transform="translate(25,48) scale(0.78)">
+
+    <path fill="url(#diamondFill)"
+          d="M64 10
+             L108 64
+             L64 118
+             L20 64 Z"/>
+
+    <!-- Shine -->
+    <path fill="url(#diamondShine)"
+          opacity="0.40"
+          d="M64 18
+             L94 56
+             L64 46
+             L34 56 Z"/>
+
+    <!-- Center Bevel -->
+    <path fill="#FFFFFF"
+          opacity="0.12"
+          d="M64 18
+             L74 64
+             L64 108
+             L54 64 Z"/>
+
+  </g>
+
+  <!-- ===== BOTTOM RIGHT VALUE ===== -->
+  <g transform="translate(150,205) rotate(180)">
+
+    <text x="20"
+          y="30"
+          font-family="Georgia"
+          font-size="21"
+          font-weight="700"
+          fill="#C1121F">3</text>
+
+    <g transform="translate(20,36) scale(0.15)">
+      <path fill="url(#diamondFill)"
+            d="M64 10
+               L108 64
+               L64 118
+               L20 64 Z"/>
+
+      <path fill="url(#diamondShine)"
+            opacity="0.40"
+            d="M64 18
+               L94 56
+               L64 46
+               L34 56 Z"/>
+    </g>
+
+  </g>
+
+</svg>

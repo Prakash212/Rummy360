@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 128 128">
+
+  <defs>
+
+    <!-- Premium black gradient -->
+    <radialGradient id="clubFill" cx="38%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#4B5563"/>
+      <stop offset="35%" stop-color="#1F2937"/>
+      <stop offset="70%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+
+    <!-- Gloss -->
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Three leaves -->
+  <circle cx="64" cy="34" r="22" fill="url(#clubFill)"/>
+  <circle cx="40" cy="62" r="22" fill="url(#clubFill)"/>
+  <circle cx="88" cy="62" r="22" fill="url(#clubFill)"/>
+
+  <!-- Stem -->
+  <rect x="58"
+        y="62"
+        width="12"
+        height="26"
+        rx="5"
+        fill="url(#clubFill)"/>
+
+  <!-- Bottom leaf -->
+  <path fill="url(#clubFill)"
+        d="M64 88
+           C55 98 47 105 39 114
+           C48 114 56 111 64 104
+           C72 111 80 114 89 114
+           C81 105 73 98 64 88 Z"/>
+
+  <!-- Top highlight -->
+  <path fill="url(#shine)"
+        opacity="0.40"
+        d="M64 18
+           C72 22 78 28 82 36
+           C74 32 66 31 58 32
+           C52 33 46 36 42 42
+           C46 30 54 22 64 18 Z"/>
+
+  <!-- Left highlight -->
+  <ellipse cx="35"
+           cy="55"
+           rx="7"
+           ry="5"
+           fill="#FFFFFF"
+           opacity="0.08"/>
+
+  <!-- Right highlight -->
+  <ellipse cx="93"
+           cy="55"
+           rx="7"
+           ry="5"
+           fill="#FFFFFF"
+           opacity="0.08"/>
+
+</svg>

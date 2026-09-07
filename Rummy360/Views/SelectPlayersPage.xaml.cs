@@ -6,7 +6,7 @@ public partial class SelectPlayersPage : ContentPage
 	{
 		InitializeComponent();
 	}
-    private async void Continue_Tapped(object sender, TappedEventArgs e)
+    private async void Continue_Tapped(object? sender, TappedEventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(SeatingOrderPage));
     }

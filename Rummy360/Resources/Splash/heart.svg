@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 128 128">
+
+  <defs>
+
+    <!-- Premium red gradient -->
+    <radialGradient id="heartFill" cx="35%" cy="28%" r="75%">
+      <stop offset="0%" stop-color="#FF8E8E"/>
+      <stop offset="30%" stop-color="#FF5A5A"/>
+      <stop offset="65%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#B3122D"/>
+    </radialGradient>
+
+    <!-- Gloss highlight -->
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Heart -->
+  <path fill="url(#heartFill)"
+        d="M64 116
+           C56 108 49 102 42 96
+           C25 82 14 68 14 50
+           C14 33 27 20 44 20
+           C53 20 60 24 64 32
+           C68 24 75 20 84 20
+           C101 20 114 33 114 50
+           C114 68 103 82 86 96
+           C79 102 72 108 64 116 Z"/>
+
+  <!-- Top glossy shine -->
+  <path fill="url(#shine)"
+        opacity="0.45"
+        d="M64 28
+           C72 24 80 23 87 26
+           C92 29 96 34 98 40
+           C90 37 82 36 74 39
+           C68 41 62 46 58 52
+           C54 44 46 39 38 37
+           C44 30 53 26 64 28 Z"/>
+
+  <!-- Left highlight -->
+  <ellipse cx="48"
+           cy="48"
+           rx="8"
+           ry="5"
+           fill="#FFFFFF"
+           opacity="0.10"/>
+
+  <!-- Bottom soft highlight -->
+  <path fill="#FFFFFF"
+        opacity="0.08"
+        d="M64 108
+           C56 101 49 96 43 91
+           C50 95 57 98 64 98
+           C71 98 78 95 85 91
+           C79 96 72 101 64 108 Z"/>
+
+</svg>

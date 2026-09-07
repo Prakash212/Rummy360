@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 240 120">
+
+  <defs>
+
+    <!-- Premium Gold -->
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF5C7"/>
+      <stop offset="18%" stop-color="#F9E27D"/>
+      <stop offset="45%" stop-color="#E2B83C"/>
+      <stop offset="72%" stop-color="#C88E15"/>
+      <stop offset="100%" stop-color="#8B5A04"/>
+    </linearGradient>
+
+    <!-- Dark Rim -->
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C68610"/>
+      <stop offset="100%" stop-color="#7A4D02"/>
+    </linearGradient>
+
+    <!-- Metallic Highlight -->
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+  </defs>
+
+  <!-- Crown Body -->
+  <path
+      d="M22 84
+         L44 34
+         L82 64
+         L120 14
+         L158 64
+         L196 34
+         L218 84
+         Q218 90 212 92
+         L28 92
+         Q22 90 22 84 Z"
+      fill="url(#gold)"
+      stroke="#986307"
+      stroke-width="2"
+      stroke-linejoin="round"/>
+
+  <!-- Bottom Gold Rim -->
+  <path
+      d="M24 84
+         Q120 76 216 84
+         L212 98
+         Q120 90 28 98 Z"
+      fill="url(#rim)"/>
+
+  <!-- Top Metallic Shine -->
+  <path
+      d="M34 76
+         L48 42
+         L82 68
+         L120 24
+         L158 68
+         L192 42
+         L206 76"
+      fill="none"
+      stroke="url(#shine)"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.70"/>
+
+  <!-- Left Jewel -->
+  <circle cx="44" cy="26" r="7" fill="#FFD95A"/>
+  <circle cx="42" cy="24" r="2" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Center Jewel -->
+  <circle cx="120" cy="10" r="8" fill="#FFE27A"/>
+  <circle cx="118" cy="8" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Right Jewel -->
+  <circle cx="196" cy="26" r="7" fill="#FFD95A"/>
+  <circle cx="194" cy="24" r="2" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Soft Inner Reflection -->
+  <ellipse
+      cx="120"
+      cy="56"
+      rx="26"
+      ry="7"
+      fill="#FFF6C2"
+      opacity="0.25"/>
+
+  <!-- Rim Highlight -->
+  <path
+      d="M28 84 Q120 78 212 84"
+      fill="none"
+      stroke="#FFF8D8"
+      stroke-width="2"
+      opacity="0.55"/>
+
+</svg>

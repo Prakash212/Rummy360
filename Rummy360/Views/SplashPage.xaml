@@ -1,136 +1,29 @@
-<ContentPage
-    x:Class="Rummy360.Views.SplashPage"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Shell.NavBarIsVisible="False"
-    BackgroundColor="{StaticResource PrimaryGreen}">
+<?xml version="1.0" encoding="utf-8" ?>
 
-    <Grid Padding="30">
-
-        <VerticalStackLayout
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Spacing="20">
-
-            <!-- Logo Circle -->
-    <Border
-    WidthRequest="110"
-    HeightRequest="110"
-    HorizontalOptions="Center"
-    BackgroundColor="Transparent"
-    Stroke="{StaticResource GoldDark}"
-    StrokeThickness="3"
-    StrokeShape="RoundRectangle 55">
-
-                <Grid>
-
-                    <Label
-                        Text="🂡"
-                        FontSize="18"
-                        TextColor="{StaticResource GoldDark}"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Start"
-                        Margin="10,6,0,0"/>
-
-                    <Label
-                        Text="R"
-                        FontSize="40"
-                        FontAttributes="Bold"
-                        TextColor="{StaticResource GoldDark}"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
-
-                    <Label
-                        Text="🂱"
-                        FontSize="18"
-                        TextColor="{StaticResource GoldDark}"
-                        HorizontalOptions="End"
-                        VerticalOptions="Start"
-                        Margin="0,6,10,0"/>
-
-                </Grid>
-
-            </Border>
-
-            <!-- App Name -->
-            <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Spacing="0">
-
-                <Label
-                    Text="RUMMY"
-                    FontSize="34"
-                    FontAttributes="Bold"
-                    TextColor="{StaticResource White}"/>
-
-                <Label
-                    Text="360"
-                    FontSize="34"
-                    FontAttributes="Bold"
-                    TextColor="{StaticResource GoldDark}"/>
-
-            </HorizontalStackLayout>
-
-            <!-- Subtitle -->
-            <Label
-                Text="OFFLINE SCORE TRACKER"
-                FontSize="14"
-                FontAttributes="Bold"
-                CharacterSpacing="2"
-                TextColor="{StaticResource GoldPale}"
-                HorizontalTextAlignment="Center"/>
-
-            <!-- Loading Text -->
-            <Label
-                Text="Loading game engine..."
-                FontSize="12"
-                TextColor="{StaticResource PrimaryGreenSoftText}"
-                HorizontalTextAlignment="Center"
-                Margin="0,25,0,0"/>
-
-            <!-- Progress Bar -->
-            <Border
-                BackgroundColor="{StaticResource ProgressBackground}"
-                StrokeThickness="0"
-                HeightRequest="8"
-                WidthRequest="280"
-                StrokeShape="RoundRectangle 4">
-
-                <Grid>
-
-                    <Border
-                        BackgroundColor="{StaticResource GoldDark}"
-                        HorizontalOptions="Start"
-                        WidthRequest="170"
-                        StrokeThickness="0"
-                        StrokeShape="RoundRectangle 4"/>
-
-                </Grid>
-
-            </Border>
-
+<ContentPage x:Class="Rummy360.Views.SplashPage" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" Shell.NavBarIsVisible="False" BackgroundColor="{StaticResource PrimaryGreen}">
+    <Grid Padding="24,40">
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+            <!-- Crown -->
+            <Image x:Name="CrownImage" Source="crown.svg" WidthRequest="102" HorizontalOptions="Center" Opacity="0" TranslationY="30" Scale="1.5" />
+            <!-- Logo + Cards -->
+            <Grid WidthRequest="250" HeightRequest="215" Margin="0,-12,0,0">
+                <!-- Ace of Spades -->
+                <Image x:Name="SpadeCard" Source="card_spade.svg" WidthRequest="92" Rotation="-18" TranslationX="-56" TranslationY="18" Opacity="0" Scale="0.8"/>
+                <!-- Two of Hearts -->
+                <Image x:Name="HeartCard" Source="card_heart.svg" WidthRequest="92" Rotation="-6" TranslationX="-18" TranslationY="6" Opacity="0" Scale="0.8"/>
+                <!-- Three of Diamonds -->
+                <Image x:Name="DiamondCard" Source="card_diamond.svg" WidthRequest="92" Rotation="6" TranslationX="18" TranslationY="6" Opacity="0" Scale="0.8"/>
+                <!-- Four of Clubs -->
+                <Image x:Name="ClubCard" Source="card_club.svg" WidthRequest="92" Rotation="18" TranslationX="56" TranslationY="18" Opacity="0" Scale="0.8"/>
+                <!-- Gold Logo Ring -->
+                <Image x:Name="LogoRing" Source="logo_ring.svg" WidthRequest="148" HorizontalOptions="Center" VerticalOptions="End" TranslationY="28" Scale="0.5" Opacity="0"/>
+            </Grid>
+            <!-- Text -->
+            <Image x:Name="LogoText" Source="logo_text.svg" WidthRequest="280" Opacity="0" TranslationY="10"/>
+            <!-- Loading -->
+            <ActivityIndicator x:Name="Loader" Color="{StaticResource GoldAccent}" IsRunning="True"/>
+            <Label Text="Shuffling Cards..." FontSize="13" HorizontalOptions="Center" TextColor="{StaticResource PrimaryGreenTint}"/>
         </VerticalStackLayout>
-
-        <!-- Footer -->
-        <VerticalStackLayout
-            VerticalOptions="End"
-            HorizontalOptions="Center"
-            Spacing="2">
-
-            <Label
-                Text="Version 1.0 • Offline"
-                FontSize="11"
-                TextColor="{StaticResource GoldPale}"
-                HorizontalTextAlignment="Center"/>
-
-            <Label
-                Text="Made with ❤️ in India"
-                FontSize="11"
-                TextColor="{StaticResource GoldMuted}"
-                HorizontalTextAlignment="Center"/>
-
-        </VerticalStackLayout>
-
+        <Label Text="Version 1.0 • Offline First" HorizontalOptions="Center" VerticalOptions="End" FontSize="12" TextColor="{StaticResource PrimaryGreenSoftText}"/>
     </Grid>
-
 </ContentPage>

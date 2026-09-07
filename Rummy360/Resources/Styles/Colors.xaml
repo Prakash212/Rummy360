@@ -55,7 +55,7 @@
     <Color x:Key="PageBackgroundAlt">#F5F7FA</Color>
     <Color x:Key="PrimaryGreenSoftText">#CFE8DA</Color>
     <Color x:Key="WinnerBackground">#FFF7ED</Color>
-    <Color x:Key="GoldAccent">#FBBF24</Color>
+    <Color x:Key="GoldAccent">#D4A72C</Color>
     <Color x:Key="ChampionText">#B45309</Color>
     <Color x:Key="ChampionSubText">#92400E</Color>
     <Color x:Key="SuccessBorderLight">#BBF7D0</Color>
@@ -63,6 +63,7 @@
     <Color x:Key="AccentGreen">#16A34A</Color>
     <Color x:Key="MutedGray">#4B5563</Color>
     <Color x:Key="InfoBackgroundLight">#EFF6FF</Color>
+    <Color x:Key="GrayBackgroundLight">#ECFEFF</Color>
     <Color x:Key="InfoBorderLight">#BFDBFE</Color>
     <Color x:Key="PrimaryGreenTint">#C7E9D5</Color>
     <Color x:Key="PrimaryGreenPale">#A7F3D0</Color>
@@ -77,7 +78,7 @@
     <Color x:Key="PlaceholderText">#9CA3AF</Color>
 
     <Color x:Key="Gold">#D4A72C</Color>
-    <Color x:Key="GoldLight">#FEFCE8</Color>
+    <Color x:Key="GoldLight">#FEF3C7</Color>
 
     <Color x:Key="PageBackground">#F3F4F6</Color>
     <Color x:Key="CardBackground">#FFFFFF</Color>
@@ -139,5 +140,9 @@
     <SolidColorBrush x:Key="GoldMutedBrush" Color="{StaticResource GoldMuted}" />
     <SolidColorBrush x:Key="ProgressBackgroundBrush" Color="{StaticResource ProgressBackground}" />
     <SolidColorBrush x:Key="PlaceholderTextBrush" Color="{StaticResource PlaceholderText}" />
-    
+
+    <!-- HEADER COLORS -->
+    <Color x:Key="HeaderSubtitleColor">#A7F3D0</Color>
+    <Color x:Key="HeaderTitleColor">#FFFFFF</Color>    
+
 </ResourceDictionary>

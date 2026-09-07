@@ -6,7 +6,7 @@ public partial class LiveScorePage : ContentPage
 	{
 		InitializeComponent();
 	}
-    private async void AddRound_Tapped(object sender, TappedEventArgs e)
+    private async void AddRound_Tapped(object? sender, TappedEventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(RoundEntryPage));
     }

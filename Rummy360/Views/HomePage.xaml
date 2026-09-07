@@ -1,78 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage
     x:Class="Rummy360.Views.HomePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Rummy360.Components"
     Shell.NavBarIsVisible="False"
     BackgroundColor="{StaticResource PageBackgroundAlt}">
 
-    <Grid RowDefinitions="120,Auto,Auto,*" Padding="0">
-        <!-- HEADER -->
-        <Border Grid.Row="0" Background="{StaticResource PrimaryGreen}" StrokeThickness="0">
-            <VerticalStackLayout Padding="24,45,24,20" Spacing="4">
-                <Label Text="👋 Welcome" FontSize="13" TextColor="{StaticResource PrimaryGreenTint}"/>
-                <Label Text="Rummy360" FontSize="28" FontAttributes="Bold" TextColor="{StaticResource White}"/>
-            </VerticalStackLayout>
-        </Border>
-        <!-- LAST GAME CARD -->
-        <Border Grid.Row="1" Margin="20,-20,20,0" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
-            <VerticalStackLayout Padding="18" Spacing="6">
-                <Label Text="LAST GAME" FontSize="11" TextColor="{StaticResource SecondaryText}"/>
+    <Grid RowDefinitions="150,Auto,Auto,*">
+
+        <!-- Page Header -->
+        <components:PageHeaderView Grid.Row="0" Subtitle="👋 Welcome back" Title="Rummy360" Description="Offline Score Tracker"/>
+        <!-- Last Game Card -->
+        <Border Grid.Row="1" Margin="20,-18,20,0" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 20">
+            <Border.Shadow>
+                <Shadow Brush="{StaticResource ShadowOverlay20Brush}" Opacity="0.12" Radius="8" Offset="0,2"/>
+            </Border.Shadow>
+            <VerticalStackLayout Padding="18" Spacing="8">
+                <Label Text="LAST GAME" FontSize="12" FontAttributes="Bold" CharacterSpacing="1.5" TextColor="{StaticResource SecondaryText}"/>
                 <Label Text="No Active Game" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource PrimaryGreen}"/>
-                <Label Text="Start a new game to begin." FontSize="12" TextColor="{StaticResource SecondaryText}"/>
+                <Label Text="Start your first game. Your latest game will appear here." FontSize="12" TextColor="{StaticResource SecondaryText}"/>
             </VerticalStackLayout>
         </Border>
-        <!-- NEW GAME BUTTON -->
-        <Border Grid.Row="2" Margin="20,20,20,0" Background="{StaticResource PrimaryGreen}" StrokeThickness="0" StrokeShape="RoundRectangle 16">            
-            <Border.GestureRecognizers>
-                <TapGestureRecognizer Tapped="NewGame_Tapped"/>
-            </Border.GestureRecognizers>            
-            <Grid HeightRequest="56">
-                <Label Text="+ NEW GAME" HorizontalOptions="Center" VerticalOptions="Center" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource White}"/>
-            </Grid>
-        </Border>
-        <!-- MENU GRID -->
-        <Grid Grid.Row="3" Margin="20,20" ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="16" RowSpacing="16">
-            <!-- PLAYERS CARD -->
-            <Border Grid.Row="0" Grid.Column="0" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="PlayersCard_Tapped"/>
-                </Border.GestureRecognizers>
-                <VerticalStackLayout Padding="18" Spacing="8">
-                    <Label Text="👥" FontSize="26"/>
-                    <Label Text="Players" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
-                    <Label Text="Manage players" FontSize="11" TextColor="{StaticResource SecondaryText}"/>
-                </VerticalStackLayout>
-            </Border>
-            <!-- HISTORY -->
-            <Border Grid.Row="0" Grid.Column="1" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
-                <VerticalStackLayout Padding="18" Spacing="8">
-                    <Label Text="🕘" FontSize="26"/>
-                    <Label Text="History" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
-                    <Label Text="Past games" FontSize="11" TextColor="{StaticResource SecondaryText}"/>
-                </VerticalStackLayout>
-            </Border>
-            <!-- SETTINGS -->
-            <Border Grid.Row="1" Grid.Column="0" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Settings_Tapped"/>
-                </Border.GestureRecognizers>
-                <VerticalStackLayout Padding="18" Spacing="8">
-                    <Label Text="⚙️" FontSize="26"/>
-                    <Label Text="Settings" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
-                    <Label Text="Game preferences" FontSize="11" TextColor="{StaticResource SecondaryText}"/>
-                </VerticalStackLayout>
-            </Border>
-            <!-- STATISTICS -->
-            <Border Grid.Row="1" Grid.Column="1" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Statistics_Tapped"/>
-                </Border.GestureRecognizers>
-                <VerticalStackLayout Padding="18" Spacing="8">
-                    <Label Text="🏆" FontSize="26"/>
-                    <Label Text="Statistics" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
-                    <Label Text="Wins and games" FontSize="11" TextColor="{StaticResource SecondaryText}"/>
-                </VerticalStackLayout>
-            </Border>
+        <!-- Quick Actions Header + FAB -->
+        <Grid Grid.Row="2" Margin="20,18,20,8" ColumnDefinitions="*,Auto" VerticalOptions="Center">
+            <components:SectionTitleView Icon="⚡" Title="Quick Actions" Subtitle="Everything you need to manage your games." VerticalOptions="Center"/>
+            <components:FloatingActionButtonView Grid.Column="1" Icon="plus.svg" Variant="Primary" FabSize="Medium" Margin="0,-8,5,0" Clicked="NewGame_Tapped" HorizontalOptions="End" VerticalOptions="Center"/>
         </Grid>
+        <!-- Scrollable Body -->
+        <ScrollView Grid.Row="3">
+            <VerticalStackLayout Padding="20,18,20,28" Spacing="18">                
+                <!-- Dashboard Cards -->
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="16" RowSpacing="16">
+                    <!-- Players -->
+                    <Border Grid.Row="0" Grid.Column="0" HeightRequest="156" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
+                        <Border.Shadow>
+                            <Shadow Brush="{StaticResource ShadowOverlay20Brush}" Opacity="0.10" Radius="8" Offset="0,2"/>
+                        </Border.Shadow>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="PlayersCard_Tapped"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout Padding="18" Spacing="10">
+                            <components:ActionIconView Icon="people.svg" IconBackground="{StaticResource InfoBackgroundLight}" ContainerSize="60" IconSize="36"/>
+                            <VerticalStackLayout Spacing="2">
+                                <Label Text="Players" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+                                <Label Text="Manage players" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    <!-- History -->
+                    <Border Grid.Row="0" Grid.Column="1" HeightRequest="156" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
+                        <Border.Shadow>
+                            <Shadow Brush="{StaticResource ShadowOverlay20Brush}" Opacity="0.10" Radius="8" Offset="0,2"/>
+                        </Border.Shadow>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Statistics_Tapped"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout Padding="18" Spacing="10">
+                            <components:ActionIconView Icon="history.svg" IconBackground="{StaticResource InfoBackgroundLight}" ContainerSize="58" IconSize="34"/>
+                            <VerticalStackLayout Spacing="2">
+                                <Label Text="History" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+                                <Label Text="Past games" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    <!-- Settings -->
+                    <Border Grid.Row="1" Grid.Column="0" HeightRequest="156" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
+                        <Border.Shadow>
+                            <Shadow Brush="{StaticResource ShadowOverlay20Brush}" Opacity="0.10" Radius="8" Offset="0,2"/>
+                        </Border.Shadow>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Settings_Tapped"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout Padding="18" Spacing="10">
+                            <components:ActionIconView Icon="settings.svg" IconBackground="{StaticResource Gray100}" ContainerSize="58" IconSize="34"/>
+                            <VerticalStackLayout Spacing="2">
+                                <Label Text="Settings" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+                                <Label Text="Game preferences" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    <!-- Statistics -->
+                    <Border Grid.Row="1" Grid.Column="1" HeightRequest="156" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 18">
+                        <Border.Shadow>
+                            <Shadow Brush="{StaticResource ShadowOverlay20Brush}" Opacity="0.10" Radius="8" Offset="0,2"/>
+                        </Border.Shadow>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Statistics_Tapped"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout Padding="18" Spacing="10">
+                            <components:ActionIconView Icon="trophy.svg" IconBackground="{StaticResource GoldLight}" ContainerSize="58" IconSize="34"/>
+                            <VerticalStackLayout Spacing="2">
+                                <Label Text="Statistics" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+                                <Label Text="Wins and games" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+                <!-- Footer -->
+                <Label Margin="0,12,0,16" HorizontalOptions="Center" FontSize="12" Text="Rummy360 • Offline First • Version 1.0" TextColor="{StaticResource SecondaryText}"/>
+            </VerticalStackLayout>
+        </ScrollView>
     </Grid>
 </ContentPage>

@@ -1,0 +1,159 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 220 220"
+     width="220"
+     height="220">
+
+    <defs>
+
+        <!-- Gold Ring -->
+        <radialGradient id="goldRing"
+                        cx="35%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#FFF7C8"/>
+            <stop offset="18%" stop-color="#FFE38A"/>
+            <stop offset="45%" stop-color="#E5BC43"/>
+            <stop offset="72%" stop-color="#C88B13"/>
+            <stop offset="100%" stop-color="#8A5A05"/>
+        </radialGradient>
+
+        <!-- Emerald Center -->
+        <radialGradient id="emerald"
+                        cx="40%" cy="35%" r="75%">
+            <stop offset="0%" stop-color="#2FD16F"/>
+            <stop offset="35%" stop-color="#138347"/>
+            <stop offset="100%" stop-color="#0B5A32"/>
+        </radialGradient>
+
+        <!-- R Fill -->
+        <linearGradient id="goldLetter"
+                        x1="0" y1="0"
+                        x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFF8D0"/>
+            <stop offset="30%" stop-color="#FFE58F"/>
+            <stop offset="60%" stop-color="#D4A72C"/>
+            <stop offset="100%" stop-color="#A66C00"/>
+        </linearGradient>
+
+        <!-- Shadow -->
+        <filter id="shadow"
+                x="-30%" y="-30%"
+                width="160%" height="160%">
+            <feDropShadow dx="0"
+                          dy="6"
+                          stdDeviation="6"
+                          flood-color="#000000"
+                          flood-opacity="0.22"/>
+        </filter>
+
+    </defs>
+
+    <!-- Soft Glow -->
+    <circle cx="110"
+            cy="110"
+            r="102"
+            fill="#F6E7A1"
+            opacity="0.12"/>
+
+    <!-- Outer Ring -->
+    <g filter="url(#shadow)">
+
+        <circle cx="110"
+                cy="110"
+                r="96"
+                fill="url(#goldRing)"/>
+
+        <!-- Inner Gold Border -->
+        <circle cx="110"
+                cy="110"
+                r="86"
+                fill="none"
+                stroke="#FFF8D5"
+                stroke-width="2"
+                opacity="0.7"/>
+
+        <!-- Emerald Circle -->
+        <circle cx="110"
+                cy="110"
+                r="78"
+                fill="url(#emerald)"/>
+
+        <!-- Inner Glow -->
+        <ellipse cx="90"
+                 cy="72"
+                 rx="44"
+                 ry="18"
+                 fill="#FFFFFF"
+                 opacity="0.22"/>
+
+        <!-- Bottom Shade -->
+        <ellipse cx="110"
+                 cy="158"
+                 rx="54"
+                 ry="18"
+                 fill="#000000"
+                 opacity="0.08"/>
+
+    </g>
+
+    <!-- Decorative Ring Dots -->
+    <g fill="#FFF3B0" opacity="0.85">
+
+        <circle cx="110" cy="18" r="3"/>
+        <circle cx="182" cy="38" r="3"/>
+        <circle cx="202" cy="110" r="3"/>
+        <circle cx="182" cy="182" r="3"/>
+        <circle cx="110" cy="202" r="3"/>
+        <circle cx="38" cy="182" r="3"/>
+        <circle cx="18" cy="110" r="3"/>
+        <circle cx="38" cy="38" r="3"/>
+
+    </g>
+
+    <!-- Embossed R -->
+    <g>
+
+        <!-- Shadow -->
+        <text x="114"
+              y="142"
+              text-anchor="middle"
+              font-family="Georgia"
+              font-size="104"
+              font-weight="700"
+              fill="#5A3A00"
+              opacity="0.28">
+            R
+        </text>
+
+        <!-- Main Letter -->
+        <text x="110"
+              y="136"
+              text-anchor="middle"
+              font-family="Georgia"
+              font-size="104"
+              font-weight="700"
+              fill="url(#goldLetter)">
+            R
+        </text>
+
+        <!-- Highlight -->
+        <text x="108"
+              y="132"
+              text-anchor="middle"
+              font-family="Georgia"
+              font-size="104"
+              font-weight="700"
+              fill="#FFF9D8"
+              opacity="0.35">
+            R
+        </text>
+
+    </g>
+
+    <!-- Bottom Highlight -->
+    <path d="M48 150
+             C70 175 150 175 172 150"
+          stroke="#FFFFFF"
+          stroke-opacity="0.12"
+          stroke-width="3"
+          fill="none"/>
+
+</svg>

@@ -25,7 +25,14 @@ public partial class PlayersPage : ContentPage
 
         BindingContext = this;
     }
-    private async void AddPlayerTapped(object sender, TappedEventArgs e)
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        NavigationLogger.Log("👥 PlayersPage");
+    }
+
+    private async void AddPlayerTapped(object? sender, TappedEventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(AddPlayerPage));
     }
