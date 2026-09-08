@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<ContentPage
+<base:BasePage
     x:Class="Rummy360.Views.HomePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:components="clr-namespace:Rummy360.Components"
+    xmlns:base="clr-namespace:Rummy360.Views.Base"
     Shell.NavBarIsVisible="False"
     BackgroundColor="{StaticResource PageBackgroundAlt}">
 
@@ -103,4 +104,4 @@
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
-</ContentPage>
+</base:BasePage>

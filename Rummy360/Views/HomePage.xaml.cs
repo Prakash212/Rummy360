@@ -1,6 +1,8 @@
+using Rummy360.Views.Base;
+
 namespace Rummy360.Views;
 
-public partial class HomePage : ContentPage
+public partial class HomePage : BasePage
 {
 	public HomePage()
 	{

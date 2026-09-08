@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<ContentPage
+<base:BasePage
     x:Class="Rummy360.Views.PlayersPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:Rummy360.Views.Base"
     xmlns:components="clr-namespace:Rummy360.Components"
     BackgroundColor="{StaticResource PageBackgroundAlt}"
     Shell.NavBarIsVisible="False">
@@ -92,4 +93,4 @@
             </Grid>
         </Grid>
     </Grid>
-</ContentPage>
+</base:BasePage>

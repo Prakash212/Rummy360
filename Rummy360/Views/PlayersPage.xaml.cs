@@ -1,9 +1,10 @@
 using Rummy360.Models;
 using Rummy360.Services;
+using Rummy360.Views.Base;
 
 namespace Rummy360.Views;
 
-public partial class PlayersPage : ContentPage
+public partial class PlayersPage : BasePage
 {
     public List<Player> Players { get; set; } = new();
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView
+    x:Class="Rummy360.Components.AvatarColorSelectorView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="Root">
+    <VerticalStackLayout Spacing="12">
+        <Label Text="SELECT AVATAR COLOR" FontSize="12" FontAttributes="Bold" CharacterSpacing="1.5"
+               TextColor="{StaticResource SecondaryText}"/>
+        <FlexLayout x:Name="AvatarContainer" BindableLayout.ItemsSource="{Binding Source={x:Reference Root}, Path=ItemsSource}" 
+                    Direction="Row" Wrap="NoWrap" JustifyContent="SpaceBetween" AlignItems="Center">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Grid WidthRequest="44" HeightRequest="44">
+                        <!-- Avatar -->
+                        <Border WidthRequest="40"
+                        HeightRequest="40"
+                        BackgroundColor="{Binding AvatarColor}"
+                        Stroke="{StaticResource GoldAccent}"
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 20">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="AvatarTapped"/>
+                            </Border.GestureRecognizers>
+
+                            <Label Text="{Binding Source={x:Reference Root}, Path=Initials}" FontSize="13" 
+                                   FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+                        </Border>
+
+                        <!-- Selected Tick -->
+                        <Border WidthRequest="15"
+                        HeightRequest="15"
+                        HorizontalOptions="End"
+                        VerticalOptions="End"
+                        Margin="0,0,-1,-1"
+                        Background="{StaticResource PrimaryGreen}"
+                        Stroke="White"
+                        StrokeThickness="1.5"
+                        StrokeShape="RoundRectangle 7.5"
+                        IsVisible="{Binding IsSelected}">
+
+                            <Image Source="check.svg" WidthRequest="8" HeightRequest="8" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>        
+    </VerticalStackLayout>
+</ContentView>

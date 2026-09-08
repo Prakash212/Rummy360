@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24">
+
+  <g fill="none"
+     stroke="#64748B"
+     stroke-width="1.8"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <!-- Capital A -->
+    <path d="M4 18 L8 6 L12 18"/>
+    <path d="M6 13 H10"/>
+
+    <!-- Small a -->
+    <path d="M15 14
+                 C15 12.8 16 12 17.4 12
+                 C18.8 12 20 12.8 20 14
+                 V18"/>
+
+    <path d="M20 16
+                 C19.5 17.2 18.6 18 17.4 18
+                 C16.1 18 15 17.2 15 16
+                 C15 14.8 16.1 14 17.4 14
+                 H20"/>
+
+  </g>
+
+</svg>

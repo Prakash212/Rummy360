@@ -1,6 +1,8 @@
+using Rummy360.Views.Base;
+
 namespace Rummy360.Views;
 
-public partial class SplashPage : ContentPage
+public partial class SplashPage : BasePage
 {
     public SplashPage()
     {
@@ -29,7 +31,7 @@ public partial class SplashPage : ContentPage
         await LogoText.TranslateToAsync(0, 0, 200);
 
         await Task.Delay(1000);
-        await Shell.Current.GoToAsync("//HomePage");
+        await Shell.Current.GoToAsync(nameof(HomePage));
     }
 
     private static async Task AnimateCard(Image card)

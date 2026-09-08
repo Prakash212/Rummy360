@@ -82,7 +82,10 @@
 	  <None Remove="Resources\Images\Icons\restore.svg" />
 	  <None Remove="Resources\Images\Icons\settings.svg" />
 	  <None Remove="Resources\Images\Icons\success.svg" />
+	  <None Remove="Resources\Images\Icons\text.svg" />
 	  <None Remove="Resources\Images\Icons\trophy.svg" />
+	  <None Remove="Resources\Images\Icons\trophy_1.svg" />
+	  <None Remove="Resources\Images\Icons\user_circle.svg" />
 	  <None Remove="Resources\Images\Icons\warning.svg" />
 	  <None Remove="Resources\Images\Icons\watermark_pattern.svg" />
 	  <None Remove="Resources\Splash\crown.svg" />
@@ -94,6 +97,7 @@
 	  <MauiImage Include="Resources\Images\Icons\backup.svg" />
 	  <MauiImage Include="Resources\Images\Icons\cards.svg" />
 	  <MauiImage Include="Resources\Images\Icons\chart.svg" />
+	  <MauiImage Include="Resources\Images\Icons\check.svg" />
 	  <MauiImage Include="Resources\Images\Icons\icon_crown.svg" />
 	  <MauiImage Include="Resources\Images\Icons\dealer.svg" />
 	  <MauiImage Include="Resources\Images\Icons\delete.svg" />
@@ -102,9 +106,15 @@
 	  <MauiImage Include="Resources\Images\Icons\people.svg" />
 	  <MauiImage Include="Resources\Images\Icons\plus.svg" />
 	  <MauiImage Include="Resources\Images\Icons\restore.svg" />
+	  <MauiImage Include="Resources\Images\Icons\gamepad.svg" />
+	  <MauiImage Include="Resources\Images\Icons\close.svg" />
 	  <MauiImage Include="Resources\Images\Icons\settings.svg" />
 	  <MauiImage Include="Resources\Images\Icons\success.svg" />
+	  <MauiImage Include="Resources\Images\Icons\text.svg" />
 	  <MauiImage Include="Resources\Images\Icons\trophy.svg" />
+	  <MauiImage Include="Resources\Images\Icons\save.svg" />
+	  <MauiImage Include="Resources\Images\Icons\trophy_1.svg" />
+	  <MauiImage Include="Resources\Images\Icons\user_circle.svg" />
 	  <MauiImage Include="Resources\Images\Icons\warning.svg" />
 	  <MauiImage Include="Resources\Images\Icons\watermark_pattern.svg" />
 	  <MauiImage Include="Resources\Images\Icons\watermark_pattern1.svg" />
@@ -128,16 +138,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Components\BasePage.xaml.cs">
-	    <DependentUpon>BasePage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Components\ActionIconView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Components\BasePage.xaml">
+	  <MauiXaml Update="Components\AvatarColorSelectorView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Components\ButtonView.xaml">
@@ -147,6 +151,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Components\FloatingActionButtonView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\InputFieldView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Components\PageHeaderView.xaml">
