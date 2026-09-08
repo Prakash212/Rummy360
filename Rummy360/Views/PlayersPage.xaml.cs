@@ -11,7 +11,6 @@ public partial class PlayersPage : ContentPage
     {
         InitializeComponent();
 
-        // Get PlayerService from MAUI Dependency Injection
         var playerService = Application.Current!
             .Handler!
             .MauiContext!
@@ -19,20 +18,18 @@ public partial class PlayersPage : ContentPage
             .GetService<PlayerService>();
 
         if (playerService != null)
-        {
             Players = playerService.GetPlayers();
-        }
 
         BindingContext = this;
     }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();
-
         NavigationLogger.Log("👥 PlayersPage");
     }
 
-    private async void AddPlayerTapped(object? sender, TappedEventArgs e)
+    private async void AddPlayerTapped(object? sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(AddPlayerPage));
     }

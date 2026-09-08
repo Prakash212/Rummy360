@@ -1,71 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage
     x:Class="Rummy360.Views.PlayersPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    BackgroundColor="{StaticResource PageBackground}">
+    xmlns:components="clr-namespace:Rummy360.Components"
+    BackgroundColor="{StaticResource PageBackgroundAlt}"
+    Shell.NavBarIsVisible="False">
+    <Grid>
+        <!-- Full Page Watermark -->
+        <Image Source="watermark_pattern1.svg"
+           Aspect="AspectFill"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill"
+           Opacity="1"
+           InputTransparent="True"
+           ZIndex="0"/>
+        <Grid RowDefinitions="150,Auto,Auto,*">
 
-    <Grid RowDefinitions="135,*">
-        <!-- Green Header -->
-        <Border Background="{StaticResource PrimaryGreen}">
-            <VerticalStackLayout Padding="24,42,24,18" Spacing="6">
-                <Label FontSize="13" Text="Player Management" TextColor="{StaticResource PrimaryGreenPale}"/>
-                <Label FontAttributes="Bold" FontSize="28" Text="Players" TextColor="{StaticResource White}"/>
-            </VerticalStackLayout>
-        </Border>
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="20" Spacing="18">
-                <!-- Add Player Button -->
-                <Border Background="{StaticResource PrimaryGreen}" StrokeShape="RoundRectangle 16">
-                    <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="AddPlayerTapped"/>
-                    </Border.GestureRecognizers>
-                    <Grid Padding="16">
-                        <Label HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" Text="+ ADD PLAYER" TextColor="{StaticResource White}"/>
+            <!-- Page Header -->
+            <components:PageHeaderView Subtitle="PLAYER MANAGEMENT" Title="Players" Description="Manage everyone who plays Rummy360."/>
+            <!-- Last Game Card -->
+            <Border Grid.Row="1" Margin="20,-18,20,0" Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderStrokeLight}" StrokeShape="RoundRectangle 20">
+                <Border.Shadow>
+                    <Shadow Brush="{StaticResource ShadowOverlay20Brush}" Opacity="0.12" Radius="8" Offset="0,2"/>
+                </Border.Shadow>
+                <!-- ADD PLAYER OVERLAY CARD -->
+
+                <VerticalStackLayout>
+                    <Grid Grid.Row="2" Margin="18,18,10,18" ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="NEW PLAYER" FontSize="12" FontAttributes="Bold" CharacterSpacing="1.5" TextColor="{StaticResource SecondaryText}"/>
+                            <Label Text="Add New Player" FontSize="20" FontAttributes="Bold" TextColor="{StaticResource PrimaryGreen}"/>
+                            <Label Text="Create a player profile before starting your next Rummy360 game." FontSize="08" TextColor="{StaticResource SecondaryText}"/>
+                        </VerticalStackLayout>
+                        <components:FloatingActionButtonView Grid.Column="1" Icon="plus.svg" Variant="Primary" FabSize="Medium" Margin="0,-8,5,0" Clicked="AddPlayerTapped" HorizontalOptions="End" VerticalOptions="Center"/>
                     </Grid>
-                </Border>
-                <!-- Dynamic Player List -->
-                <CollectionView ItemsSource="{Binding Players}">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Border Background="{StaticResource CardBackground}" Padding="14" Margin="0,4" Stroke="{StaticResource BorderGray}" StrokeShape="RoundRectangle 18">
-                                <Grid ColumnDefinitions="52,*,32,32">
-                                    <!-- Avatar -->
-                                    <Border WidthRequest="42" HeightRequest="42" BackgroundColor="{Binding AvatarColor}" StrokeShape="RoundRectangle 21">
-                                        <Label HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="14" Text="{Binding Initials}" TextColor="{StaticResource White}"/>
-                                    </Border>
-                                    <!-- Player Details -->
-                                    <VerticalStackLayout Grid.Column="1" Spacing="2" Padding="12,0">
-                                        <Label FontAttributes="Bold" FontSize="18" Text="{Binding Name}" TextColor="{StaticResource PrimaryText}"/>
-                                        <Label FontSize="13" Text="{Binding GamesPlayed, StringFormat='{}{0} Games Played'}" TextColor="{StaticResource SecondaryText}"/>
-                                    </VerticalStackLayout>
-                                    <!-- Edit -->
-                                    <Label Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource AvatarAmber}" FontSize="18" Text="✏️"/>
-                                    <!-- Delete -->
-                                    <Label Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" TextColor="{StaticResource DangerAccent}" FontSize="18" Text="🗑"/>
-                                </Grid>
-                                <Border.Shadow>
-                                    <Shadow Brush="{StaticResource ShadowOverlay20}" Offset="0,3" Opacity="0.20" Radius="10"/>
-                                </Border.Shadow>
-                            </Border>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                </VerticalStackLayout>
+            </Border>
+            <!-- Quick Actions Header + FAB -->
+            <Grid Grid.Row="2" Margin="20,18,20,8" ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                <components:SectionTitleView Icon="⚡" Title="Players List" Subtitle="Tap Edit or Delete to manage players" VerticalOptions="Center"/>
+            </Grid>
+            <!-- Scrollable Body -->
+            <Grid Grid.Row="3">
+                <!-- Scrollable Content -->
+                <ScrollView BackgroundColor="Transparent">
 
-                <!-- Summary Card -->
-                <Border Background="{StaticResource SuccessBackground}" Padding="18" Stroke="{StaticResource SuccessBorder}" StrokeShape="RoundRectangle 18">
-                    <VerticalStackLayout Spacing="12">
-                        <Label FontAttributes="Bold" FontSize="20" Text="Player Summary" TextColor="{StaticResource PrimaryGreenDark}"/>
-                        <Grid ColumnDefinitions="*,Auto">
-                            <Label Text="Total Players" TextColor="{StaticResource PrimaryGreenDark}"/>
-                            <Label Grid.Column="1" FontAttributes="Bold" Text="4" TextColor="{StaticResource PrimaryGreenDark}"/>
-                        </Grid>
-                        <Grid ColumnDefinitions="*,Auto">
-                            <Label Text="Games Stored" TextColor="{StaticResource PrimaryGreenDark}"/>
-                            <Label Grid.Column="1" FontAttributes="Bold" Text="39" TextColor="{StaticResource PrimaryGreenDark}"/>
-                        </Grid>
+                    <VerticalStackLayout Padding="20,18,20,28" Spacing="18">
+
+                        <!-- PLAYER LIST -->
+                        <CollectionView ItemsSource="{Binding Players}" SelectionMode="None" BackgroundColor="Transparent">
+
+                            <CollectionView.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <Border Background="{StaticResource CardBackground}" Stroke="{StaticResource BorderGray}" StrokeShape="RoundRectangle 22" Padding="14" Margin="0,0,0,14">
+                                        <Border.Shadow>
+                                            <Shadow Brush="{StaticResource ShadowOverlay20Brush}" Offset="0,3" Radius="10" Opacity="0.15"/>
+                                        </Border.Shadow>
+                                        <Grid ColumnDefinitions="58,*,40,40" ColumnSpacing="12">
+                                            <!-- Avatar -->
+                                            <Border WidthRequest="52" HeightRequest="52" BackgroundColor="{Binding AvatarColor}" Stroke="{StaticResource GoldAccent}" StrokeThickness="2" StrokeShape="RoundRectangle 26">
+                                                <Label Text="{Binding Initials}" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="{StaticResource WhiteText}"/>
+                                            </Border>
+
+                                            <!-- Details -->
+                                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                                                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+                                                <Label Text="{Binding GamesPlayed, StringFormat='{}{0} Games Played'}" FontSize="13" TextColor="{StaticResource SecondaryText}"/>
+                                            </VerticalStackLayout>
+
+                                            <!-- Edit -->
+                                            <Border Grid.Column="2" WidthRequest="42" HeightRequest="42" Background="{StaticResource GoldLight}" Stroke="{StaticResource GoldAccent}" StrokeShape="RoundRectangle 21">
+                                                <Image Source="edit.svg" WidthRequest="18" HeightRequest="18" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            </Border>
+                                            <!-- Delete -->
+                                            <Border Grid.Column="3" WidthRequest="42" HeightRequest="42" Background="{StaticResource DangerBackground}" Stroke="{StaticResource DangerBorder}" StrokeShape="RoundRectangle 21">
+                                                <Image Source="delete.svg" WidthRequest="18" HeightRequest="18" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            </Border>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        <!-- Footer -->
+                        <Label Text="Rummy360 • Offline First • Version 1.0" Margin="0,12,0,16" HorizontalOptions="Center" FontSize="12" TextColor="{StaticResource SecondaryText}"/>
                     </VerticalStackLayout>
-                </Border>
-            </VerticalStackLayout>
-        </ScrollView>
+                </ScrollView>
+            </Grid>
+        </Grid>
     </Grid>
 </ContentPage>

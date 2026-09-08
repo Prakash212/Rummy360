@@ -84,6 +84,7 @@
 	  <None Remove="Resources\Images\Icons\success.svg" />
 	  <None Remove="Resources\Images\Icons\trophy.svg" />
 	  <None Remove="Resources\Images\Icons\warning.svg" />
+	  <None Remove="Resources\Images\Icons\watermark_pattern.svg" />
 	  <None Remove="Resources\Splash\crown.svg" />
 	  <None Remove="Resources\Splash\logo_ring.svg" />
 	  <None Remove="Resources\Splash\logo_text.svg" />
@@ -105,6 +106,8 @@
 	  <MauiImage Include="Resources\Images\Icons\success.svg" />
 	  <MauiImage Include="Resources\Images\Icons\trophy.svg" />
 	  <MauiImage Include="Resources\Images\Icons\warning.svg" />
+	  <MauiImage Include="Resources\Images\Icons\watermark_pattern.svg" />
+	  <MauiImage Include="Resources\Images\Icons\watermark_pattern1.svg" />
 	  <MauiImage Include="Resources\Splash\card_club.svg" />
 	  <MauiImage Include="Resources\Splash\card_diamond.svg" />
 	  <MauiImage Include="Resources\Splash\card_heart.svg" />
@@ -125,7 +128,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Components\BasePage.xaml.cs">
+	    <DependentUpon>BasePage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Components\ActionIconView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\BasePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Components\ButtonView.xaml">

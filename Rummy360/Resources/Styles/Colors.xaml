@@ -143,6 +143,19 @@
 
     <!-- HEADER COLORS -->
     <Color x:Key="HeaderSubtitleColor">#A7F3D0</Color>
-    <Color x:Key="HeaderTitleColor">#FFFFFF</Color>    
+    <Color x:Key="HeaderTitleColor">#FFFFFF</Color>
+
+    <!-- ======================================= -->
+    <!-- Rummy360 Watermark Theme -->
+    <!-- ======================================= -->
+
+    <Color x:Key="WatermarkGold">#D4AF37</Color>
+    <Color x:Key="WatermarkGoldLight">#F6E7A1</Color>
+
+    <!-- Transparent watermark overlays -->
+    <Color x:Key="WatermarkOverlay">#12D4AF37</Color>
+    <Color x:Key="WatermarkOverlayLight">#08F6E7A1</Color>
+
+    <SolidColorBrush x:Key="WatermarkOverlayBrush" Color="{StaticResource WatermarkOverlay}"/>
 
 </ResourceDictionary>
